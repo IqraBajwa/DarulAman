@@ -1,0 +1,44 @@
+﻿@model DarulAman.Models.tbl_FAQs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Detail</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <p class="heading-center" align="center">FAQs</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            FAQ_QUESTION
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAQ_QUESTION)
+        </dd>
+
+        <dt>
+            FAQ_ANSWER
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAQ_ANSWER)
+        </dd>
+
+    </dl>
+</div>
+<div align="center">
+    <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> |
+    <a href="@Url.Action("Edit", "tbl_Book", new { id = Model.FAQ_ID})" class="custombtn">Edit</a>
+</div>

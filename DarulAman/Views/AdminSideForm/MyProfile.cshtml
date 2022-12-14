@@ -1,0 +1,96 @@
+﻿@model IEnumerable<DarulAman.Models.tbl_Admin>
+@using DarulAman.Models
+ 
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Index</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<table class="table">
+    <tr>
+       
+        <th>
+            FIRST_NAME
+        </th>
+        <th>
+            LAST_NAME
+        </th>
+        <th>
+            EMAIL
+        </th>
+        <th>
+            CONTACT
+        </th>
+        <th>
+            PASSWORD
+        </th>
+        <th>
+            ADDRESS
+        </th>
+        
+        <th>
+            STATUS
+        </th>
+        
+        <th>
+            ACCESS-LEVEL
+        </th>
+        
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        tbl_Admin a = (tbl_Admin)Session["Admin"];
+        if (a.ADMIN_ID == item.ADMIN_ID)
+        {
+        <tr>
+
+           
+            <td>
+                @item.FIRST_NAME
+            </td>
+            <td>
+                @item.LAST_NAME
+            </td>
+            <td>
+                @item.EMAIL
+            </td>
+            <td>
+                @item.CONTACT
+            </td>
+            <td>
+                @item.PASSWORD
+            </td>
+            <td>
+                @item.ADDRESS
+            </td>
+          <td >
+                @item.STATUS
+            </td>
+            <td>
+                @item.ACCESS_LEVEL_FID
+            </td>
+          
+            <td>
+                <a href="@Url.Action("MyProfileEdit", "AdminSideForm", new { id = item.ADMIN_ID })">
+                    <i class="fa fa-edit btn btn-success  "></i>
+                </a>
+               
+            </td>
+
+        </tr>
+        }
+    }
+
+</table>

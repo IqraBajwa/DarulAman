@@ -1,0 +1,119 @@
+﻿@model DarulAman.Models.tbl_Decreased
+
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+<!---------Date Validation----------->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var today = new Date();
+        var month = ('0' + (today.getMonth() + 1)).slice(-2);
+        var day = ('0' + today.getDate()).slice(-2);
+        var year = today.getFullYear();
+        var date = year + '-' + month + '-' + day;
+        $('[id*=txtdateofreservation]').attr('min', date);
+    });
+</script>
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <br /><br />  <br /> <h3 style="color:#FDBE33">﴾كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ ۖ ثُمَّ إِلَيْنَا تُرْجَعُونَ ﴿57</h3><br />
+                <h3 style="color:#FDBE33">
+                    AL Quran
+                </h3>
+                <p style="color:white">
+                    "Every soul shall taste death. Then you shall be brought back to Us."<br />(Surah Al Ankabut Ayat 57)
+                </p>
+            </div>
+            <div class="col-12">
+                <br /><br /> <h2>Funeral</h2>
+                <a href="@Url.Action("IndexCustomer","Home")">Home</a>
+                <a href="@Url.Action("DeadRelative","Home")">Funeral</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<div class="single">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-12">
+                <div class="form2">
+                    <div class="comment-form">
+                        <center> <h2 style="color:#FDBE33;">Late Person Information</h2></center><br />
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    <label for="first_name" style="color:black"> FIRST_NAME *</label>
+                                    <input type="text" name="FIRST_NAME" class="form-control" id="first_name" required style="cursor:auto" />
+                                    @Html.ValidationMessageFor(model => model.FIRST_NAME, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="last_name" style="color:black"> LAST_NAME *</label>
+                                <input type="text" name="LAST_NAME" class="form-control" id="last_name" required style="cursor:auto" />
+                                @Html.ValidationMessageFor(model => model.LAST_NAME, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="AGE1" style="color:black">AGE *</label>
+                                <input type="text" name="AGE" class="form-control" id="AGE1" required style="cursor:auto" />
+                                @Html.ValidationMessageFor(model => model.AGE, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="GENDER1" style="color:black">GENDER *</label>
+                                <div>
+
+                                    <input type="radio" id="female" class="custom-radio" name="GENDER" value="Female" required>&nbsp;
+                                    <label for="female">Female</label><br>
+                                    <input type="radio" id="male" name="GENDER" class="custom-radio" value="Male" required>&nbsp;
+                                    <label for="male">Male</label><br>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="DATE_OF_DEATH1" style="color:black">DATE_OF_DEATH *</label>
+                                <input type="text" name="DATE_OF_DEATH" class="form-control" id="DATE_OF_DEATH1" required  style="cursor:auto"/>
+                                @Html.ValidationMessageFor(model => model.DATE_OF_DEATH, "", new { @class = "text-danger" })
+                            </div>
+
+                            <input type="hidden" name="FUNERAL_FID" value="@ViewBag.LastID" />
+
+
+                            <div class="form-group">
+                                <input type="checkbox" required />
+                                <span>
+                                    I Accept the <a href="@Url.Action("Privacypolicy","Home")" style="color:#FDBE33 "><b>Terms and Conditions</b></a>
+                                </span>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-custom btn-block">
+                            </div>
+
+                        }
+
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

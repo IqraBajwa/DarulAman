@@ -1,0 +1,139 @@
+﻿@model IEnumerable<DarulAman.Models.tbl_TeachingRegistration>
+@{
+    int no = 0;
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Index</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Table-------------------------------------->
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white_shd full margin_bottom_30">
+                    <div class="full graph_head">
+                        <div class="heading1 margin_0">
+                            <h2>Teaching Regestration</h2>
+                        </div>
+                    </div>
+                    <div class="table_section padding_infor_info">
+                        <div class="table-responsive-sm">
+                            <table class="table table-active table-bordered">
+                                <tr>
+                                    <th>Sr#</th>
+                                    <th>
+                                     FIRST_NAME
+                                    </th>
+                                    <th>
+                                        LAST_NAME
+                                    </th>
+                                    <th>
+                                       CONTACT
+                                    </th>
+                                    <th>
+                                        EMAIL
+                                    </th>
+                                    <th>
+                                       ID
+                                    </th>
+                                    <th>
+                                      GENDER
+                                    </th>
+                                    <th>
+                                       ORIGIN
+                                    </th>
+                                    <th>
+                                    ADDRESS
+                                    </th>
+                                    <th>
+                                       GUARDIAN
+                                    </th>
+                                    <th>
+                                       COURSE
+                                    </th>
+                                    <th>
+                                       STATUS
+                                    </th>
+                                    <th>
+                                    MESSAGE
+                                    </th>
+                                    <th>
+                                      DATE
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    no++;
+                                    <tr>
+                                        <td>@no</td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FIRST_NAME)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.LAST_NAME)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CONTACT)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.EMAIL)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.GENDER)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ORIGIN)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ADDRESS)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.GUARDIAN)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.COURSE)
+                                        </td>  
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.STATUS)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MESSAGE)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DATE)
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("Edit", "tbl_TeachingRegistration", new { id=item.TEACHING_ID})">
+                                                <i class="fa fa-edit btn btn-success  "></i>
+                                            </a>|
+                                            <a href="@Url.Action("Details","tbl_TeachingRegistration", new { id=item.TEACHING_ID })">
+                                                <i class="fa fa-book btn btn-warning"></i>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

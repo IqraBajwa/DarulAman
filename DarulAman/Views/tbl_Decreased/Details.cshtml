@@ -1,0 +1,92 @@
+﻿@model DarulAman.Models.tbl_Decreased
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Detail</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <p class="heading" align="center">Funeral Registration</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            CONTACTED PERSON
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_DeadRelative.FIRST_NAME)
+        </dd>
+
+        <dt>
+            FIRST_NAME
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIRST_NAME)
+        </dd>
+
+        <dt>
+            LAST_NAME
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAST_NAME)
+        </dd>
+
+        <dt>
+            AGE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AGE)
+        </dd>
+
+        <dt>
+            GENDER
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENDER)
+        </dd>
+
+        <dt>
+            DATE_OF_DEATH
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_OF_DEATH)
+        </dd>
+
+        <dt>
+            STATUS
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            DATE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE)
+        </dd>
+
+    </dl>
+</div>
+<div align="center">
+    <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> |
+    <a href="@Url.Action("Edit", "tbl_Book", new { id = Model.DECREASED_ID})" class="custombtn">Edit</a>
+</div>
+

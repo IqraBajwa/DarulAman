@@ -1,0 +1,108 @@
+﻿@model DarulAman.Models.tbl_Marriage
+
+@{
+   
+    ViewBag.Title = "Details";
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Detail</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <p class="heading" align="center">Marriage Registration</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            FIRST_NAME
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIRST_NAME)
+        </dd>
+
+        <dt>
+            LAST_NAME
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAST_NAME)
+        </dd>
+
+        <dt>
+            CONTACT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTACT)
+        </dd>
+
+        <dt>
+            EMAIL
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            DATE_OF_MARRIAGE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_OF_MARRIAGE)
+        </dd>
+
+        <dt>
+            ORIGIN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORIGIN)
+        </dd>
+
+        <dt>
+            MESSAGE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MESSAGE)
+        </dd>
+
+        <dt>
+            DATE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE)
+        </dd>
+
+        <dt>
+            STATUS
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div align="center">
+        <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> |
+        <a href="@Url.Action("Edit", "tbl_Book", new { id = Model.MARRIAGE_ID})" class="custombtn">Edit</a>

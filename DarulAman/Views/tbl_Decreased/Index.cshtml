@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DarulAman.Models.tbl_Decreased>
+
+
+@{
+    int no = 0;
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Index</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Table-------------------------------------->
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white_shd full margin_bottom_30">
+                    <div class="full graph_head">
+                        <div class="heading1 margin_0">
+                            <h2> Late Person Information</h2>
+                        </div>
+                    </div>
+                    <div class="table_section padding_infor_info">
+                        <div class="table-responsive-sm">
+                            <table class="table table-active table-bordered">
+                                <tr>
+                                    <th>Sr#</th>
+                                    <th>
+                                       CONTACTED PRSON 
+                                    </th>
+                                    <th>
+                                        FIRST_NAME
+                                    </th>
+                                    <th>
+                                       LAST_NAME
+                                    </th>
+                                    <th>
+                                        AGE
+                                    </th>
+                                    <th>
+                                        GENDER
+                                    </th>
+                                    <th>
+                                        DATE_OF_DEATH
+                                    </th>
+                                    <th>
+                                        STATUS
+                                    </th>
+                                    <th>
+                                       DATE
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    no++;
+                            <tr>
+                                <td>@no</td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tbl_DeadRelative.FIRST_NAME)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FIRST_NAME)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LAST_NAME)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AGE)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.GENDER)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DATE_OF_DEATH)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.STATUS)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DATE)
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("Edit", "tbl_Decreased", new { id=item.DECREASED_ID})">
+                                        <i class="fa fa-edit btn btn-success  "></i>
+                                    </a>|
+                                    <a href="@Url.Action("Details","tbl_Decreased", new { id=item.DECREASED_ID })">
+                                        <i class="fa fa-book btn btn-warning"></i>
+                                    </a>
+
+                                </td>
+                            
+                            </tr>
+                                }
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

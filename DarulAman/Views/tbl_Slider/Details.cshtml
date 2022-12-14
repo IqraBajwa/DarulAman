@@ -1,0 +1,59 @@
+﻿@model DarulAman.Models.tbl_Slider
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Detail</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <p class="heading-center" align="center">Slider</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            SLIDER_PICTURE
+        </dt>
+
+        <dd>
+            <img width="100" height="100" src="@Url.Content(Model.SLIDER_PICTURE)" />
+        </dd>
+
+        <dt>
+            SLIDER_DETAIL1
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLIDER_DETAIL1)
+        </dd>
+
+        <dt>
+            SLIDER_DETAIL2
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLIDER_DETAIL2)
+        </dd>
+
+        <dt>
+            REFERENCE
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REFERENCE)
+        </dd>
+
+    </dl>
+</div>
+<div align="center">
+    <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> |
+    <a href="@Url.Action("Edit", "tbl_Book", new { id = Model.SLIDER_ID})" class="custombtn">Edit</a>
+

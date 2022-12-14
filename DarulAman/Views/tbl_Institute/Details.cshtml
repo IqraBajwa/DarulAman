@@ -1,0 +1,44 @@
+﻿@model DarulAman.Models.tbl_Institute
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="midde_cont">
+    <div class="container-fluid">
+        <div class="row column_title">
+            <div class="col-md-12">
+                <div class="page_title">
+                    <h2>Detail</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <p class="heading-center" align="center">Institute</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            INSTITUTE_EMAIL
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INSTITUTE_EMAIL)
+        </dd>
+
+        <dt>
+            INSTITUTE_CONTACT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INSTITUTE_CONTACT)
+        </dd>
+
+    </dl>
+</div>
+<div align="center">
+    <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> |
+    <a href="@Url.Action("Edit", "tbl_Book", new { id = Model.INSTITUTE_ID})" class="custombtn">Edit</a>
+</div>
