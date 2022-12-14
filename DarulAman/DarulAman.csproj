@@ -579,6 +579,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="ProductPIC\06.png" />
+    <Content Include="ProductPIC\Barcodepic.png" />
     <Content Include="ProductPIC\female.jpeg" />
     <Content Include="ProductPIC\feMale.png" />
     <Content Include="ProductPIC\header.jpeg" />
@@ -591,6 +592,7 @@
     <Content Include="ProductPIC\menu-5.jpg" />
     <Content Include="ProductPIC\Mosque.jpg" />
     <Content Include="ProductPIC\OIP.jpg" />
+    <Content Include="ProductPIC\Scanmepic.png" />
     <Content Include="ProductPIC\slider%28project%29.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
