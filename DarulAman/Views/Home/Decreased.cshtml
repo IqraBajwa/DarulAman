@@ -38,6 +38,22 @@
     </div>
 </div>
 <!-- Page Header End -->
+<!-- Prayer -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-header">
+                <div class="section-header text-center">
+                    <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
+                    <iframe title="Prayer Timing" style="padding: 2rem 2rem 2rem 2rem; margin:20px 20px 20px 20px; width: 90%; height: 450px; border: 3px solid #dedede; background-image: linear-gradient(#dedede, white); box-shadow: 10px 10px revert; border-radius: 50px 50px " scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Prayer -->
 <div class="single">
     <div class="container">
         <div class="row">
@@ -88,7 +104,7 @@
 
                             <div class="form-group">
                                 <label for="DATE_OF_DEATH1" style="color:black">DATE_OF_DEATH *</label>
-                                <input type="text" name="DATE_OF_DEATH" class="form-control" id="DATE_OF_DEATH1" required  style="cursor:auto"/>
+                                <input type="date" name="DATE_OF_DEATH" class="form-control" id="DATE_OF_DEATH1" required style="cursor:auto" />
                                 @Html.ValidationMessageFor(model => model.DATE_OF_DEATH, "", new { @class = "text-danger" })
                             </div>
 

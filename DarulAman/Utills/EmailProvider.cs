@@ -18,7 +18,7 @@ namespace DarulAman.Utills
                 SmtpClient smtp = new SmtpClient();
                 message.From = new MailAddress(ConfigurationManager.AppSettings["email"]);
                 message.To.Add(new MailAddress(receiverEmail));
-                MailAddress CarbonCopy = new MailAddress("waqassiddique9@gmail.com");
+                MailAddress CarbonCopy = new MailAddress("asim1911@hotmail.com");
                 message.CC.Add(CarbonCopy);
                 message.Subject = emailSubject;
                 message.IsBodyHtml = true; //to make message body as html  

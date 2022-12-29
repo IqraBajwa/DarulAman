@@ -533,6 +533,7 @@
     <Content Include="Content\Customer\img\homeimg.jpeg" />
     <Content Include="Content\Customer\img\Islamic Library.png" />
     <Content Include="Content\Customer\img\Islamic School.png" />
+    <Content Include="Content\Customer\img\Libraries.png" />
     <Content Include="Content\Customer\img\Logoicon.ico" />
     <Content Include="Content\Customer\img\male.jpeg" />
     <Content Include="Content\Customer\img\Marriage.png" />
@@ -591,6 +592,7 @@
     <Content Include="ProductPIC\menu-4.jpg" />
     <Content Include="ProductPIC\menu-5.jpg" />
     <Content Include="ProductPIC\Mosque.jpg" />
+    <Content Include="ProductPIC\MosqueImage.png" />
     <Content Include="ProductPIC\OIP.jpg" />
     <Content Include="ProductPIC\Scanmepic.png" />
     <Content Include="ProductPIC\slider%28project%29.jpeg" />

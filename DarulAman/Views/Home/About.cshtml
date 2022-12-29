@@ -19,43 +19,111 @@
     </div>
 </div>
 <!-- Page Header End -->
+<!-- Prayer -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-header">
+                <div class="section-header text-center">
+                    <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
+                    <iframe title="Prayer Timing" style="padding: 2rem 2rem 2rem 2rem; margin:20px 20px 20px 20px; width: 90%; height: 450px; border: 3px solid #dedede; background-image: linear-gradient(#dedede, white); box-shadow: 10px 10px revert; border-radius: 50px 50px " scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Prayer -->
+<!-- About Start -->
 <!-- About Start -->
 <div class="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="about-img" data-parallax="scroll" data-image-src="../../Content/Customer/img/moon-light-shine-through-window-into-islamic-mosque-interior (1).jpg"></div>
-            </div>
-            <div class="col-lg-6">
-                <div class="section-header">
-                    <p>Learn About Us</p>
-                    <h2>Under Maintenance</h2>
+    <div class="single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <img src="~/Content/Customer/img/Picture.png" style="height:700px;width:475px" />
+
                 </div>
-                <div class="about-tab">
-                    <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
-                        </li>
+                <div class="col-lg-6">
+                    <div class="section-header">
 
-                    </ul>
+                        <h2>Project Plan </h2>
+                    </div>
+                    <div class="about-tab">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                            </li>
 
-                    <div class="tab-content">
-                        <div id="tab-content-1" class="container tab-pane active">
-                            Under Maintenance
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="tab-content-1" class="container tab-pane active">
+                                <div class="card-body conatiner" style=" margin: 5px 12px 5px 12px">
+                                    <ol class="text align-content-center" style="list-style:none;">
+                                        <li>
+                                            Serving the Creature of Allah
+                                        </li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                            <div id="tab-content-2" class="container tab-pane fade">
+
+                                <div class="card-body conatiner" style="margin: 5px 12px 5px 12px">
+                                    <h5>Goal-1</h5>
+                                    <ol class="align-content-center" style="list-style:none;">
+                                        <li>Masjid</li>
+                                        <li> Quran and Hadith lessons (men and women)
+                                        <li />
+                                        <li> Voluntary service</li>
+
+                                    </ol>
+
+                                    <h5>Goal-2</h5>
+                                    <ol class="align-content-center" style="list-style:none;">
+                                        <li>Madrasah</li>
+                                        <li>Islamic school for boys and girls
+                                        <li />
+                                        <li> Islamic Library</li>
+                                    </ol>
+                                    <h5>Goal-3</h5>
+                                    <ol class="align-content-center" style="list-style:none;">
+                                        <li>Islamic funeral and burial</li>
+                                        <li>Islamic marriage (Nikkah)
+                                        <li />
+                                        <li> Darul Aman Marriage Bureau</li>
+                                    </ol>
+                                    <h5>Goal-4</h5>
+                                    <ol class="align-content-center" style="list-style:none;">
+                                        <li>Prayer rooms in Muslim-majority districts </li>
+                                        <li>Sports hall for men and women, boys and girls
+                                        <li />
+                                        <li> Halal slaughterhouse</li>
+                                    </ol>
+                                    <h5>Goal-5</h5>
+                                    <ol class="align-content-center" style="list-style:none;">
+                                        <li>Free bus service for differently abled people to be picked up and dropped off at Darul Aman</li>
+                                        <li>Other projects discussed in Darul Aman meetings
+                                        <li />
+                                    </ol>
+
+                                </div>
+                            </div>
+
                         </div>
-                        <div id="tab-content-2" class="container tab-pane fade">
-                            Under Maintenance
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- About End -->
 <!-- About End -->
 <!-- Facts Start
 <div class="facts" data-parallax="scroll" data-image-src="~/Content/Customer/img/facts.jpg">
@@ -102,36 +170,3 @@
 </div>
 <!-- Facts End -->
 <!-- Team Start -->
-<div class="team">
-    <div class="container">
-        <div class="section-header text-center">
-            <p>Meet Our Team</p>
-            <h2>Under Maintenance</h2>
-        </div>
-
-        <div class="row">
-            @foreach (var item in db.tbl_Team.ToList())
-            {
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="@Url.Content(item.PICTURE)" />
-                        </div>
-                        <div class="team-text">
-                            <h2>@item.FIRST_NAME @item.LAST_NAME</h2>
-                            <p>@item.PROFESSION</p>
-                            <p1>@item.RESPONSIBILITIES</p1><br />
-                            <p1>@item.LANGUAGES</p1><br />
-                            <p1>@item.ORIGIN</p1>
-
-
-                        </div>
-                    </div>
-                </div>
-            }
-
-
-
-        </div>
-    </div>
-</div>

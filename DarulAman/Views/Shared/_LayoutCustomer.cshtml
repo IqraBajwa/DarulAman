@@ -224,7 +224,7 @@
         <div class="top-bar d-none d-md-block">
             <div class="container-fluid">
                 <div class="row">
-                   <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="fa fa-phone-alt" style="font-size:small"></i>
@@ -239,11 +239,11 @@
 
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4">
                         <div class="top-bar-center">
                             <div>
-                                <a href="@Url.Action("GeneralRegistration","Home")"class="embed-responsive">
+                                <a href="@Url.Action("GeneralRegistration","Home")" class="embed-responsive">
                                     <input type="button" style="padding:10px 7px;color:#FDBE33;font-weight:800" value="To meet your Community Click here" class="btn btn-link embed-responsive">
                                 </a>
                             </div>
@@ -274,7 +274,7 @@
             <div class="container-fluid">
                 <a href="@Url.Action("IndexCustomer","Home")" class="navbar-brand">
                     <img src="~/Content/Customer/img/WhatsApp Image 2022-12-11 at 10.00.37 PM.jpeg" />
-                    
+
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -348,11 +348,11 @@
 
         @RenderBody()
 
-        <!-- Footer Start -->
+
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="footer-contact">
                             <h2>Mosque</h2>
                             <p><i class="fa fa-map-marker-alt"></i>Magdeburg, Germany</p>
@@ -361,18 +361,21 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="footer-link">
                             <h2>Popular Links</h2>
                             <a href="@Url.Action("About","Home")">About Us</a>
                             <a href="@Url.Action("Contact","Home")">Contact Us</a>
                             <a href="@Url.Action("Event","Home")">Upcoming Events</a>
                             <a href="@Url.Action("Team","Home")">Our Team</a>
-                            <a href="@Url.Action("Registration","Home")">To meet your community <br/><label style="margin:0 1rem" class="option-hover">Click Here</label></a>
-                            
+                            <a href="@Url.Action("GeneralRegistration","Home")">
+                                To meet your community <br />
+                                <label style="margin:0 1rem" class="option-hover">Click Here</label>
+                            </a>
+
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="footer-link">
                             <h2>Useful Links</h2>
                             <a href="@Url.Action("Termsofuse","Home")">Terms of use</a>
@@ -381,43 +384,29 @@
                             <a href="@Url.Action("FAQs","Home")">FAQs</a>
                         </div>
                     </div>
-                     <!--- <div class="col-lg-3 col-md-6">
-                       
-                            <h2>Translator</h2>
-                           
-                                
-                                <div class="text" style="color:white">
 
-                                    <i class="fa fa-globe fa-caret-down"> </i>
-                                    
-                                </div>
-                               <button class="btn btn-custom">Submit</button>
-    <label>Don't worry, we don't spam!</label>--->
-                           
-                      
-                    </div>
                 </div>
             </div>
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">DarulAman</a></p>
+                        <p>&copy; <a href="@Url.Action("IndexCustomer","Home")">Darul Aman</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="@Url.Action("About","Home")">PakiExperts</a></p>
+                        <p>Designed By <a href="@Url.Action("About","Home")">PakiExperts </a></p>
                     </div>
                 </div>
             </div>
-        
+        </div>
+
         <!-- Footer End -->
         <!-- Back to top button -->
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
+        <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-chevron-up"></i></a>
+        
         <!-- Pre Loader -->
         <div id="loader" class="show">
             <div class="loader"></div>
         </div>
-
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

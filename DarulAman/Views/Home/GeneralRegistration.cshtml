@@ -15,7 +15,22 @@
         </div>
     </div>
 </div>
-<!-- Page Header End -->
+<!-- Page Header End --><!-- Prayer -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-header">
+                <div class="section-header text-center">
+                    <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
+                    <iframe title="Prayer Timing" style="padding: 2rem 2rem 2rem 2rem; margin:20px 20px 20px 20px; width: 90%; height: 450px; border: 3px solid #dedede; background-image: linear-gradient(#dedede, white); box-shadow: 10px 10px revert; border-radius: 50px 50px " scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Prayer -->
 <div class="single">
     <div class="container">
         <div class="row">
@@ -23,70 +38,71 @@
                 <div class="form2">
                     <div class="comment-form">
                         <center> <h2 style="color:#FDBE33;">Enter your Information</h2></center><br />
-                       
-                    <form action="/Home/GeneralReg" method="post">
-                        <div class="form-group">
-                            <label for="name"> First Name *</label>
-                            <input type="text" class="form-control" name="FIRST_NAME" id="name" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="name"> Last Name *</label>
-                            <input type="text" class="form-control" id="name" name="LAST_NAME" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="tel#">Tel# </label>
-                            <input type="number" class="form-control" pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$" name="CONTACT" id="tel#">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" class="form-control" name="EMAIL" id="email" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="id">Profession *</label>
-                            <input type="text" class="form-control" name="PROFESSION" id="id" required="required">
-                        </div>
 
-                        <div class="form-group">
-                            <p>Gender *</p>
-                            <div>
-
-                                <input type="radio" id="female" class="custom-radio" name="GENDER" value="Female" required>&nbsp;
-                                <label for="female">Female</label><br>
-                                <input type="radio" id="male" name="GENDER" class="custom-radio" value="Male" required>&nbsp;
-                                <label for="male">Male</label><br>
-                                
+                        <form action="/Home/GeneralReg" method="post">
+                            <div class="form-group">
+                                <label for="name"> First Name *</label>
+                                <input type="text" class="form-control" name="FIRST_NAME" id="name" required="required">
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id">Country *</label>
-                            <input type="text" class="form-control" name="COUNTRY" id="id" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="id">City *</label>
-                            <input type="text" class="form-control" id="id" name="CITY" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="id">Address *</label>
-                            <input type="text" class="form-control" name="ADDRESS" id="id">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" cols="30" rows="5" name="MESSAGE" class="form-control"></textarea>
-                        </div>
+                            <div class="form-group">
+                                <label for="name"> Last Name *</label>
+                                <input type="text" class="form-control" id="name" name="LAST_NAME" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="tel#">Tel# </label>
+                                <input type="number" class="form-control" 
+                                       pattern="/^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g" name="CONTACT" id="tel#">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" name="EMAIL" id="email" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="id">Profession *</label>
+                                <input type="text" class="form-control" name="PROFESSION" id="id" required="required">
+                            </div>
 
-                        <div class="form-group">
-                            <input type="checkbox" required />
-                            <span>
-                                I Accept the <a href="@Url.Action("Privacypolicy","Home")" style="color:#FDBE33 " required="required"><b>Terms and Conditions</b></a>
-                            </span>
-                        </div>
-                        <br />
-                         <div class="form-group">
-                            <input type="submit" value="Submit" class="btn btn-custom btn-block">
-                        </div>
+                            <div class="form-group">
+                                <p>Gender *</p>
+                                <div>
 
-                    </form>
-                        
+                                    <input type="radio" id="female" class="custom-radio" name="GENDER" value="Female" required>&nbsp;
+                                    <label for="female">Female</label><br>
+                                    <input type="radio" id="male" name="GENDER" class="custom-radio" value="Male" required>&nbsp;
+                                    <label for="male">Male</label><br>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id">Country *</label>
+                                <input type="text" class="form-control" name="COUNTRY" id="id" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="id">City *</label>
+                                <input type="text" class="form-control" id="id" name="CITY" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="id">Address *</label>
+                                <input type="text" class="form-control" name="ADDRESS" id="id">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" cols="30" rows="5" name="MESSAGE" class="form-control"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" required />
+                                <span>
+                                    I Accept the <a href="@Url.Action("Privacypolicy","Home")" style="color:#FDBE33 " required="required"><b>Terms and Conditions</b></a>
+                                </span>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-custom btn-block">
+                            </div>
+
+                        </form>
+
                     </div>
                 </div>
             </div>
