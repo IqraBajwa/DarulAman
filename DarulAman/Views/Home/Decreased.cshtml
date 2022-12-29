@@ -111,12 +111,7 @@
                             <input type="hidden" name="FUNERAL_FID" value="@ViewBag.LastID" />
 
 
-                            <div class="form-group">
-                                <input type="checkbox" required />
-                                <span>
-                                    I Accept the <a href="@Url.Action("Privacypolicy","Home")" style="color:#FDBE33 "><b>Terms and Conditions</b></a>
-                                </span>
-                            </div>
+                            
                             <br />
                             <div class="form-group">
                                 <input type="submit" value="Submit" class="btn btn-custom btn-block">
@@ -124,9 +119,6 @@
 
                         }
 
-                        <div>
-                            @Html.ActionLink("Back to List", "Index")
-                        </div>
                     </div>
                 </div>
             </div>

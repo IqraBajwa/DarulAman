@@ -95,7 +95,7 @@ namespace DarulAman.Controllers
                 //Max Means to Fetch LastID in the Current Table
                 return Redirect("/Home/Decreased/" + max);
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(DeadRelative.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
            
@@ -263,7 +263,7 @@ namespace DarulAman.Controllers
                 db.tbl_TeachingRegistration.Add(t);
                 db.SaveChanges();  
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(t.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
         }
@@ -280,7 +280,7 @@ namespace DarulAman.Controllers
                 db.tbl_SchoolRegistration.Add(s);
                 db.SaveChanges();
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(s.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
         }
@@ -294,7 +294,7 @@ namespace DarulAman.Controllers
                db.tbl_Marriage.Add(m);
                 db.SaveChanges();
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(m.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
 
@@ -308,7 +308,7 @@ namespace DarulAman.Controllers
                 db.tbl_GeneralRegistrationForm.Add(g);
                 db.SaveChanges();
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(g.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
         }
@@ -348,7 +348,7 @@ namespace DarulAman.Controllers
                 db.SaveChanges();
                 ViewBag.message = "Your Request have been delivered";
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(c.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
         }
@@ -361,7 +361,7 @@ namespace DarulAman.Controllers
                 db.tbl_Volunteer.Add(v);
                 db.SaveChanges();
             }
-            string mailBody = "Your request have been receievd. We Will contact you soon.\n Thanks";
+            string mailBody = "Your request has been received. We Will contact you soon.\n Thanks";
             EmailProvider.Email(v.EMAIL, "CONFIRMATION MESSAGE", mailBody);
             return RedirectToAction("Confirmation");
         }
