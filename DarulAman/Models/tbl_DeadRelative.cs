@@ -50,16 +50,15 @@ namespace DarulAman.Models
         [StringLength(200)]
         public string MESSAGE { get; set; }
 
-       
-        [StringLength(10)]
+        [StringLength(50)]
         public string CONDITION { get; set; }
 
-        [Column(TypeName = "datetime")]
         public DateTime DATE { get; set; }
 
-      
+        public virtual tbl_DeadRelative tbl_DeadRelative1 { get; set; }
 
-    
+        public virtual tbl_DeadRelative tbl_DeadRelative2 { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_Decreased> tbl_Decreased { get; set; }
     }

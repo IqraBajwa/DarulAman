@@ -22,128 +22,112 @@
     }
 </script>
 <!---------------Scripting function-------------------->
-<div class="carousel">
-    <div class="container-fluid">
-        <div class="owl-carousel">
+@*<div class="carousel">
+        <div class="container-fluid">
+            <div class="owl-carousel">
+                @foreach (var item in db.tbl_Slider.ToList())
+                {
+                    <div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="@Url.Content(item.SLIDER_PICTURE)" style="width:100%; height: 100%" />
+                        </div>
+                        <div class="carousel-text">
+                            <div class="container">
 
-            @foreach (var item in db.tbl_Slider.ToList())
-            {
-                <div class="carousel-item">
-                    <div class="carousel-img">
-                        <img src="@Url.Content(item.SLIDER_PICTURE)" />
+                                <p style="color: #FDBE33;  margin-top: 4rem;  "><b>@item.SLIDER_DETAIL1</b></p>
+                                <p>
+                                    @item.SLIDER_DETAIL2
+                                </p>
+                                <p><b>@item.REFERENCE</b></p>
+                            </div>
+                            <div class="carousel-btn " style="scroll-margin-bottom:unset">
+                                <a class="btn btn-custom btn-m" href="https://gofund.me/e25a0e41">GoFundMe</a>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="carousel-text">
-                        <div class="container">
 
-                            <h1 style="color:#FDBE33;font-size:large"><b>@item.SLIDER_DETAIL1</b></h1>
-                            <p style="font-size:medium;font-weight:300">
+                }
+
+            </div>
+        </div>
+    </div>*@
+<!-- Carousel End -->
+<!-- Carousel Start -->
+
+    <div class="carousel">
+        <div class="container-fluid">
+            <div class="owl-carousel">
+                @foreach (var item in db.tbl_Slider.ToList())
+                {<div class="carousel-item">
+                        <div class="carousel-img">
+                            <img src="@Url.Content(item.SLIDER_PICTURE)" alt="Image" style="width:100%" />
+                        </div>
+                        <div class="carousel-text text-center">
+                            <div class="conatiner texte-center"></div>
+                            <h3 style="color: #FDBE33; margin-top: 4rem;" class="conatiner title"><b>@item.SLIDER_DETAIL1</b></h3>
+                            <p>
                                 @item.SLIDER_DETAIL2
                             </p>
                             <p><b>@item.REFERENCE</b></p>
+                            <div class="carousel-btn">
+                                <a class="btn btn-custom btn-m" href="https://gofund.me/e25a0e41">GoFundMe</a>
+                            </div>
                         </div>
-                        <div class="carousel-btn">
-                            <a class="btn btn-custom btn-lg" href="https://gofund.me/e25a0e41">GoFundMe</a>
-
-
-                        </div>
-
                     </div>
-
+                }
                 </div>
-
-            }
-
         </div>
     </div>
-</div>
-<!-- Carousel End -->
-<!-- Video Modal Start-->
-<!--<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>-->
-<!-- 16:9 aspect ratio -->
-<!--<div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+
+    <!-- Carousel End -->
+    <!-- Video Modal Start-->
+    <!--<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>-->
+    <!-- 16:9 aspect ratio -->
+    <!--<div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>-->
-<!-- Prayer -->
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="section-header">
-                <div class="section-header text-center">
-                    <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
-                    <iframe title="Prayer Timing" style="padding: 2rem 2rem 2rem 2rem; margin:20px 20px 20px 20px; width: 90%; height: 450px; border: 3px solid #dedede; background-image: linear-gradient(#dedede, white); box-shadow: 10px 10px revert; border-radius: 50px 50px " scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Prayer -->
-<!--<div class="about">
+    </div>-->
+    <!-- Prayer -->
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <img src="Content/Customer/img/Picture.png" />-->
-@*<div class="about-img" data-parallax="scroll" data-image-src="../../Content/Customer/img/Picture.png">
-
-    </div>*@
-
-<!--</div>
-            <div class="col-lg-6">
+        <div class="row">
+            <div class="col-lg-12">
                 <div class="section-header">
-                    <p>Learn About Us</p>
-                    <h2>Project Plan (Milestones/Goals)</h2>
-                </div>
-                <div class="about-tab">
-                    <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
-                        </li>
-
-                    </ul>
-
-                    <div class="tab-content">
-                        <div id="tab-content-1" class="container tab-pane active">
-                            Under Maintenance
-                        </div>
-                        <div id="tab-content-2" class="container tab-pane fade">
-                            Under Maintenance
-                        </div>
-
+                    <div class="section-header text-center">
+                        <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
+                        <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>-->
-<!-- About End -->
-<!-- About Start -->
-<div class="about">
-    <div class="single">
+
+    <!-- Prayer -->
+    <!--<div class="about">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
+                    <img src="Content/Customer/img/Picture.png" />-->
+    @*<div class="about-img" data-parallax="scroll" data-image-src="../../Content/Customer/img/Picture.png">
 
-                    <img src="~/Content/Customer/img/Picture.png" style="height:700px;width:475px" />
+        </div>*@
 
-                </div>
+    <!--</div>
                 <div class="col-lg-6">
                     <div class="section-header">
-                       
-                        <h2>Project Plan </h2>
+                        <p>Learn About Us</p>
+                        <h2>Project Plan (Milestones/Goals)</h2>
                     </div>
                     <div class="about-tab">
                         <ul class="nav nav-pills nav-justified">
@@ -158,101 +142,10 @@
 
                         <div class="tab-content">
                             <div id="tab-content-1" class="container tab-pane active">
-                                <div class="card-body conatiner" style=" margin: 5px 12px 5px 12px">
-                                    <ul class="text align-content-center" style="list-style:none;">
-                                        <li>
-                                            <h6 style="color:black">
-                                                Darul Aman is an islamic centre in Magdeburg, a city in East Germany and also the capital of the state Saxony Anhalt.
-                                            </h6>
-                                        </li>
-                                        <li>
-                                            <b> What is Islam?</b>
-                                        </li>
-                                        <li>
-                                            Islam comprises of the following:
-
-                                        </li>
-                                    </ul><ol class="text align-content-center" style="list-style:circle;">
-                                        <li>
-                                            <b style="color:#FDBE33">Faith (ايمانيات):</b>  Belief that our success is only and only in following the orders of Allah (Quran) and the ways of Muhammad (Sunnah).
-
-                                        </li>
-                                        <li>
-                                            <b style="color:#FDBE33">Prayer and worship (عبادات):</b>
-                                            <ol class="text align-content-center">
-                                                <li>
-                                                    Five times of prayer
-
-                                                </li>
-                                                <li> Fasting in Ramadan</li>
-                                                <li> Paying Zakat and</li>
-                                                <li>
-
-                                                    Performing the Hajj.
-                                                </li>
-                                            </ol>
-                                        </li>
-                                        <li>
-                                            <b style="color:#FDBE33">Ethics (اخلاقيات) :</b>    Working on our innerself i.e., keeping our mind and heart  away from bad thinking, wishes and desires.
-
-
-
-                                        </li>
-                                        <li>
-                                            <b style="color:#FDBE33">Social System (معاشرت) :</b> Building up a prosperous، happy and healthy society. Helping and supporting the whole creation of Allah (all living beings).
-
-                                        </li>
-                                        <li>
-                                            All of the above are strongly interconnected to one another and Darul Aman is and will be the place to learn and practice all these.
-                                           
-                                            <h6>  <b>Our Moto:</b></h6>
-                                            Learn by practicing and practice by learning.
-                                        </li>
-                                    </ol>
-
-                                </div>
+                                Under Maintenance
                             </div>
                             <div id="tab-content-2" class="container tab-pane fade">
-
-                                <div class="card-body conatiner" style="margin: 5px 12px 5px 12px">
-                                    <h5>Goal-1</h5>
-                                    <ol class="align-content-center" style="list-style:none;">
-                                        <li>Masjid</li>
-                                        <li> Quran and Hadith lessons (men and women)
-                                        <li />
-                                        <li> Voluntary service</li>
-
-                                    </ol>
-
-                                    <h5>Goal-2</h5>
-                                    <ol class="align-content-center" style="list-style:none;">
-                                        <li>Madrasah</li>
-                                        <li>Islamic school for boys and girls
-                                        <li />
-                                        <li> Islamic Library</li>
-                                    </ol>
-                                    <h5>Goal-3</h5>
-                                    <ol class="align-content-center" style="list-style:none;">
-                                        <li>Islamic funeral and burial</li>
-                                        <li>Islamic marriage (Nikkah)
-                                        <li />
-                                        <li> Darul Aman Marriage Bureau</li>
-                                    </ol>
-                                    <h5>Goal-4</h5>
-                                    <ol class="align-content-center" style="list-style:none;">
-                                        <li>Prayer rooms in Muslim-majority districts </li>
-                                        <li>Sports hall for men and women, boys and girls
-                                        <li />
-                                        <li> Halal slaughterhouse</li>
-                                    </ol>
-                                    <h5>Goal-5</h5>
-                                    <ol class="align-content-center" style="list-style:none;">
-                                        <li>Free bus service for differently abled people to be picked up and dropped off at Darul Aman</li>
-                                        <li>Other projects discussed in Darul Aman meetings
-                                        <li />
-                                    </ol>
-
-                                </div>
+                                Under Maintenance
                             </div>
 
                         </div>
@@ -260,427 +153,559 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- About End -->
-<!-- SubProjects Start -->
-<div class="team1">
-    <div class="container">
-        <div class="section-header text-center">
-            <p>What We Do?</p>
-            <h2>Sub Projects</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="~/Content/Customer/img/Teaching.png" />
-
-
-                    </div>
-                    <div class="team-text">
-                        <h2>Quran & Hadith</h2>
-                        <a href="@Url.Action("Teaching","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-
-
-                        <img src="~/Content/Customer/img/Islamic School.png" />
-                    </div>
-                    <div class="team-text">
-                        <h2>Islamic School</h2>
-                        <a href="@Url.Action("School","Home")" class="btn btn-custom">View Detail</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-
-                        <img src="~/Content/Customer/img/Translation services.png" />
-                    </div>
-                    <div class="team-text">
-                        <h2>Translation Services</h2>
-                        <a href="@Url.Action("Translation","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="~/Content/Customer/img/Funeral.png" />
-
-                    </div>
-                    <div class="team-text">
-                        <h2>Funeral</h2>
-                        <a href="@Url.Action("Funeral","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-----------------next row-->
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="~/Content/Customer/img/Marriage.png" />
-
-                    </div>
-                    <div class="team-text">
-                        <h2>Marriage Ceremony</h2>
-                        <a href="@Url.Action("Marriage","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="~/Content/Customer/img/Slaughter Haus.png" />
-
-                    </div>
-                    <div class="team-text">
-                        <h2>Halah Slaughter House</h2>
-                        <a href="@Url.Action("Slaughterhouse","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-
-                        <img src="~/Content/Customer/img/Gym.png" />
-                    </div>
-                    <div class="team-text">
-                        <h2>GYM</h2>
-                        <a href="@Url.Action("Gym","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-item">
-                    <div class="team-img">
-
-                        <img src="~/Content/Customer/img/Islamic Library.png" />
-                    </div>
-                    <div class="team-text">
-                        <h2>Islamic Library</h2>
-                        <a href="@Url.Action("Library","Home")" class="btn btn-custom">View Detail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!------------SubProject End-------------->
-<!-- Facts Start
-<div class="facts" data-parallax="scroll" data-image-src="~/Content/Customer/img/facts.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="flaticon-home"></i>
-                    <div class="facts-text">
-                        <h3 class="facts-plus" data-toggle="counter-up">150</h3>
-                        <p>Countries</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="flaticon-charity"></i>
-                    <div class="facts-text">
-                        <h3 class="facts-plus" data-toggle="counter-up">400</h3>
-                        <p>Volunteers</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="flaticon-kindness"></i>
-                    <div class="facts-text">
-                        <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
-                        <p>Our Goal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="flaticon-donation"></i>
-                    <div class="facts-text">
-                        <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>
-                        <p>Raised</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Facts End -->
-<!-- Causes Start -->
-<!-- Event Start -->
-<div class="event">
-    <div class="container">
-        <div class="section-header text-center">
-            <p></p>
-            <h2> Upcoming Events </h2>
-        </div>
-        @if (db.tbl_Event.Count() > 0)
-        {
-            <div class="row">
-
-                @foreach (var item in db.tbl_Event.ToList())
-                {
+    </div>-->
+    <!-- About End -->
+    <!-- About Start -->
+    <div class="about">
+        <div class="single">
+            <div class="container">
+                <div class="row">
                     <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="@Url.Content(item.EVENT_PICTURE)">
-                            <div class="event-content">
-                                <div class="event-meta" style="width:40%">
-                                    <p><i class="fa fa-calendar-alt"></i>@DateTime.Parse(item.EVENT_DATE.ToString()).ToShortDateString()</p>
-                                    <p><i class="far fa-clock"></i> @DateTime.Parse(item.TIME_TO.ToString()).ToShortTimeString()-@DateTime.Parse(item.TIME_FROM.ToString()).ToShortTimeString()</p>
-                                    <div class="text-lowercase">
-                                        <h7><i class="fa fa-map-marker-alt embed-responsive"></i>@item.ADDRESS</h7>
+                        <img src="~/Content/Customer/img/Darul Aman PNG.png" style="height:700px;width:400px ; align-content:center;align-self:center" />
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-header">
+
+                            <h2>Project Plan </h2>
+                        </div>
+                        <div class="about-tab">
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="tab-content-1" class="container tab-pane active">
+                                    <div class="card-body conatiner" style=" margin: 5px 12px 5px 12px">
+                                        <ul class="text align-content-center" style="list-style:none;">
+                                            <li>
+                                                <h6 style="color:black">
+                                                    Darul Aman is an islamic centre in Magdeburg, a city in East Germany and also the capital of the state Saxony Anhalt.
+                                                </h6>
+                                            </li>
+                                            <li>
+                                                <b> What is Islam?</b>
+                                            </li>
+                                            <li>
+                                                Islam comprises of the following:
+
+                                            </li>
+                                        </ul><ol class="text align-content-center" style="list-style:circle;">
+                                            <li>
+                                                <b style="color:#FDBE33">Faith (ايمانيات):</b>  Belief that our success is only and only in following the orders of Allah (Quran) and the ways of Muhammad (Sunnah).
+
+                                            </li>
+                                            <li>
+                                                <b style="color:#FDBE33">Prayer and worship (عبادات):</b>
+                                                <ol class="text align-content-center">
+                                                    <li>
+                                                        Five times of prayer
+
+                                                    </li>
+                                                    <li> Fasting in Ramadan</li>
+                                                    <li> Paying Zakat and</li>
+                                                    <li>
+
+                                                        Performing the Hajj.
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                <b style="color:#FDBE33">Ethics (اخلاقيات) :</b>    Working on our innerself i.e., keeping our mind and heart  away from bad thinking, wishes and desires.
+
+
+
+                                            </li>
+                                            <li>
+                                                <b style="color:#FDBE33">Social System (معاشرت) :</b> Building up a prosperous، happy and healthy society. Helping and supporting the whole creation of Allah (all living beings).
+
+                                            </li>
+                                            <li>
+                                                All of the above are strongly interconnected to one another and Darul Aman is and will be the place to learn and practice all these.
+
+                                                <h6>  <b>Our Moto:</b></h6>
+                                                Learn by practicing and practice by learning.
+                                            </li>
+                                        </ol>
+
                                     </div>
                                 </div>
-                                <br /><div class="event-text">
-                                    <h3>@item.EVENT_NAME</h3>
-                                    <br />
-                                    <p>@item.EVENT_DESCRIPTION</p>
+                                <div id="tab-content-2" class="container tab-pane fade">
 
+                                    <div class="card-body conatiner" style="margin: 5px 12px 5px 12px">
+                                        <h5>Goal-1</h5>
+                                        <ol class="align-content-center" style="list-style:none;">
+                                            <li>Masjid</li>
+                                            <li> Quran and Hadith lessons (men and women)
+                                            <li />
+                                            <li> Voluntary service</li>
+
+                                        </ol>
+
+                                        <h5>Goal-2</h5>
+                                        <ol class="align-content-center" style="list-style:none;">
+                                            <li>Madrasah</li>
+                                            <li>Islamic school for boys and girls
+                                            <li />
+                                            <li> Islamic Library</li>
+                                        </ol>
+                                        <h5>Goal-3</h5>
+                                        <ol class="align-content-center" style="list-style:none;">
+                                            <li>Islamic funeral and burial</li>
+                                            <li>Islamic marriage (Nikkah)
+                                            <li />
+                                            <li> Darul Aman Marriage Bureau</li>
+                                        </ol>
+                                        <h5>Goal-4</h5>
+                                        <ol class="align-content-center" style="list-style:none;">
+                                            <li>Prayer rooms in Muslim-majority districts </li>
+                                            <li>Sports hall for men and women, boys and girls
+                                            <li />
+                                            <li> Halal slaughterhouse</li>
+                                        </ol>
+                                        <h5>Goal-5</h5>
+                                        <ol class="align-content-center" style="list-style:none;">
+                                            <li>Free bus service for differently abled people to be picked up and dropped off at Darul Aman</li>
+                                            <li>Other projects discussed in Darul Aman meetings
+                                            <li />
+                                        </ol>
+
+                                    </div>
                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- SubProjects Start -->
+    <div class="team1">
+        <div class="container">
+            <div class="section-header text-center">
+                <p style="color:#4a4c70">What We Do?</p>
+                <h2>Sub Projects</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="~/Content/Customer/img/Teaching.png" />
+
+
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Quran & Hadith</h2>
+                            <a href="@Url.Action("Teaching","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+
+
+                            <img src="~/Content/Customer/img/Islamic School.png" />
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Islamic School</h2>
+                            <a href="@Url.Action("School","Home")" class="btn btn-custom">View Detail</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+
+                            <img src="~/Content/Customer/img/Translation services.png" />
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Translation Services</h2>
+                            <a href="@Url.Action("Translation","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="~/Content/Customer/img/Funeral.png" />
+
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Funeral</h2>
+                            <a href="@Url.Action("Funeral","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-----------------next row-->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="~/Content/Customer/img/Marriage.png" />
+
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Marriage Ceremony</h2>
+                            <a href="@Url.Action("Marriage","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="~/Content/Customer/img/Slaughter Haus.png" />
+
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Halah Slaughter House</h2>
+                            <a href="@Url.Action("Slaughterhouse","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+
+                            <img src="~/Content/Customer/img/Gym.png" />
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">GYM</h2>
+                            <a href="@Url.Action("Gym","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+
+                            <img src="~/Content/Customer/img/Islamic Library.png" />
+                        </div>
+                        <div class="team-text teamblocktextproject">
+                            <h2 style="color: #4a4c70">Islamic Library</h2>
+                            <a href="@Url.Action("Library","Home")" class="btn btn-custom">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------SubProject End-------------->
+    <!-- Facts Start
+    <div class="facts" data-parallax="scroll" data-image-src="~/Content/Customer/img/facts.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-home"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-plus" data-toggle="counter-up">150</h3>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-charity"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-plus" data-toggle="counter-up">400</h3>
+                            <p>Volunteers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-kindness"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
+                            <p>Our Goal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-donation"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>
+                            <p>Raised</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+    <!-- Causes Start -->
+    <!-- Event Start -->
+    <div class="event">
+        <div class="container">
+            <div class="section-header text-center">
+                <p></p>
+                <h2> Upcoming Events </h2>
+            </div>
+            @if (db.tbl_Event.Count() > 0)
+            {
+                <div class="row">
+
+                    @foreach (var item in db.tbl_Event.ToList())
+                    {
+                        <div class="col-lg-6">
+                            <div class="event-item">
+                                <img src="@Url.Content(item.EVENT_PICTURE)">
+                                <div class="event-content">
+                                    <div class="event-meta" style="width:40%">
+                                        <p><i class="fa fa-calendar-alt"></i>@DateTime.Parse(item.EVENT_DATE.ToString()).ToShortDateString()</p>
+                                        <p><i class="far fa-clock"></i> @DateTime.Parse(item.TIME_TO.ToString()).ToShortTimeString()-@DateTime.Parse(item.TIME_FROM.ToString()).ToShortTimeString()</p>
+                                        <div class="text-lowercase">
+                                            <h7><i class="fa fa-map-marker-alt embed-responsive"></i>@item.ADDRESS</h7>
+                                        </div>
+                                    </div>
+                                    <br /><div class="event-text">
+                                        <h3>@item.EVENT_NAME</h3>
+                                        <br />
+                                        <p>@item.EVENT_DESCRIPTION</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            }
+            else
+            {
+
+                <center>
+                    <h3 style="color:#4a4c70"><b>No Event Exist Yet</b></h3>
+                </center>
+
+            }
+
+        </div>
+    </div>
+    <!-- Event End -->
+    <!-- Donate Start
+    <div class="donate" data-parallax="scroll" data-image-src="~/Content/Customer/img/donate.jpg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="donate-content">
+                        <div class="section-header">
+                            <p>Support Us</p>
+                            <h2> Under Maintenance</h2>
+                        </div>
+                        <div class="donate-text">
+                            <p>
+                                Under Maintenance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="donate-form">
+                        <form action="/Home/Donate" method="post">
+                            <div class="control-group">
+                                <input type="text" class="form-control" autocomplete="off" name="FIRST_NAME" id="fname" placeholder="First Name" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" autocomplete="off" name="LAST_NAME" id="lname" placeholder="Last Name" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" autocomplete="off" name="EMAIL" id="email" placeholder="Email" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" autocomplete="off" name="AMOUNT" id="amount" placeholder="Amount" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <p class="color-word">Payment *</p>
+                                <div>
+
+                                    <input type="radio" id="credit" class="custom-radio2 " name="Gender" value="Credit" checked>&nbsp;
+                                    <label for="credit" class="color-word">Credit</label><br>
+                                    <input type="radio" id="debit" name="Gender" class="custom-radio2" value="Debit">&nbsp;
+                                    <label for="debit" class="color-word">Debit</label><br>
+                                    <input type="radio" id="paypal" name="Gender" class="custom-radio2" value="Paypal">&nbsp;
+                                    <label for="paypal" class="color-word">Paypal</label>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" type="submit">Support Us</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Donate End -->
+    <!-- Team Start -->
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center">
+                <p></p>
+                <h2>Meet Our Team</h2>
+            </div>
+
+            <div class="row">
+                @foreach (var item in db.tbl_Team.ToList())
+                {
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="@Url.Content(item.PICTURE)" />
+                            </div>
+                            <div class="conatiner">
+                                <div class="team-text teamblocktext">
+                                    <h2>@item.FIRST_NAME @item.LAST_NAME</h2>
+                                    <p1>@item.RESPONSIBILITIES</p1><br />
+                                    <p1><i class="fa fa-" style="margin-left:3px"></i>@item.PROFESSION</p1>
+                                    <br />
+                                    <p1>@item.LANGUAGES</p1><br />
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
                 }
 
 
-            </div>
-        }
-        else
-        {
 
-            <center>
-                <h1><b style="color:#FDBE33">No Event Exist Yet</b></h1>
-            </center>
-
-        }
-
-    </div>
-</div>
-<!-- Event End -->
-<!-- Donate Start
-<div class="donate" data-parallax="scroll" data-image-src="~/Content/Customer/img/donate.jpg">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <div class="donate-content">
-                    <div class="section-header">
-                        <p>Support Us</p>
-                        <h2> Under Maintenance</h2>
-                    </div>
-                    <div class="donate-text">
-                        <p>
-                            Under Maintenance
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="donate-form">
-                    <form action="/Home/Donate" method="post">
-                        <div class="control-group">
-                            <input type="text" class="form-control" autocomplete="off" name="FIRST_NAME" id="fname" placeholder="First Name" required="required" />
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" autocomplete="off" name="LAST_NAME" id="lname" placeholder="Last Name" required="required" />
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" autocomplete="off" name="EMAIL" id="email" placeholder="Email" required="required" />
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" autocomplete="off" name="AMOUNT" id="amount" placeholder="Amount" required="required" />
-                        </div>
-                        <div class="control-group">
-                            <p class="color-word">Payment *</p>
-                            <div>
-
-                                <input type="radio" id="credit" class="custom-radio2 " name="Gender" value="Credit" checked>&nbsp;
-                                <label for="credit" class="color-word">Credit</label><br>
-                                <input type="radio" id="debit" name="Gender" class="custom-radio2" value="Debit">&nbsp;
-                                <label for="debit" class="color-word">Debit</label><br>
-                                <input type="radio" id="paypal" name="Gender" class="custom-radio2" value="Paypal">&nbsp;
-                                <label for="paypal" class="color-word">Paypal</label>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-custom" type="submit">Support Us</button>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Donate End -->
-<!-- Team Start -->
-<div class="team">
-    <div class="container">
-        <div class="section-header text-center">
-            <p></p>
-            <h2>Meet Our Team</h2>
-        </div>
+    <!-- Volunteer Start -->
+    <div class="volunteer">
+        <div class="container">
 
-        <div class="row">
-            @foreach (var item in db.tbl_Team.ToList())
-            {
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="@Url.Content(item.PICTURE)" />
-                        </div>
-                        <div class="team-text">
-                            <h2>@item.FIRST_NAME @item.LAST_NAME</h2>
-                            <p>@item.PROFESSION</p>
-                            <p1>@item.RESPONSIBILITIES</p1><br />
-                            <p1>@item.LANGUAGES</p1><br />
-                            <p1>@item.ORIGIN</p1>
-                            <p1></p1>
-
-
-                        </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="volunteer-form">
+                        @using (Html.BeginForm("SubmitVolunteer", "Home"))
+                        {
+                            <form>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="FIRST_NAME" placeholder="First Name" required="required" style="cursor:auto" />
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="LAST_NAME" placeholder="Last Name" required="required" style="cursor:auto" />
+                                </div>
+                                <div class="control-group">
+                                    <input type="email" class="form-control" name="EMAIL" placeholder="Email" required="required" style="cursor:auto" />
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="idfor" name="ID" placeholder="ID" required="required" style="cursor:auto" />
+                                    <div id="message" style="color:red"></div>
+                                </div>
+                                <div class="control-group">
+                                    <textarea class="form-control" name="REASON" placeholder="Why you want to become a volunteer?" required="required"></textarea>
+                                </div>
+                                <div>
+                                    <button class="btn btn-custom" type="submit">Become a volunteer</button>
+                                </div>
+                            </form>
+                        }
                     </div>
                 </div>
-            }
+                <div class="col-lg-7">
+                    <div class="volunteer-content">
+                        <div class="section-header">
+                            <h2>Become A Volunteer</h2>
+                            <h3 style="color:white"><b>Prophet Muhammad(ﷺ)advised us:</b></h3>
+                            <p> to take advantage of five before five:</p>
+                            <p><b>"Take advantage of five maters before five other matters"</b></p>
+                            <ol style="color:white">
+                                <li>Your youth,before you become old</li>
+                                <li>Your health,before you fall sick </li>
+                                <li>Your wealth,before you become poor</li>
+                                <li>Your free time,before you become busy</li>
+                                <li>And your life,before you death</li>
+                            </ol>
+                            <p>Allah has blessed each human being at least with one of the following: </p>
+                            <ul style="color:white">
+                                <li>Time</li>
+                                <li>Wealth</li>
+                                <li>Health</li>
+                            </ul>
+                        </div>
+                        <div class="volunteer-text">
+                            <p>
+                                If,I have all the above,then I must be more thankful to Allah amd try my best to utilize these in the way(s) described in Quran and Hadith.This is the only way I can be successful in this world and in the life after.
+                            </p>
+                            <p><u>Darul-Aman</u> is one of the biggest projects and needs people with their prayers(Dua),skills,money,time and much more.</p>
+                            <p>Think out of the box and ask yourself<b>"how can I support and be part of this project?"</b></p>
+                            <p>If you support this project in a regular basis,then you are considered as the Member of Darul-Aman otherwise a Volunteer</p>
 
-
-
-        </div>
-    </div>
-</div>
-<!-- Volunteer Start -->
-<div class="volunteer" >
-    <div class="container">
-
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="volunteer-form">
-                    @using (Html.BeginForm("SubmitVolunteer", "Home"))
-                    {
-                        <form>
-                            <div class="control-group">
-                                <input type="text" class="form-control" name="FIRST_NAME" placeholder="First Name" required="required" style="cursor:auto" />
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" name="LAST_NAME" placeholder="Last Name" required="required" style="cursor:auto" />
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control" name="EMAIL" placeholder="Email" required="required" style="cursor:auto" />
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="idfor" name="ID" placeholder="ID" required="required" style="cursor:auto" />
-                                <div id="message" style="color:red"></div>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control" name="REASON" placeholder="Why you want to become a volunteer?" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-custom" type="submit">Become a volunteer</button>
-                            </div>
-                        </form>
-                    }
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="volunteer-content">
-                    <div class="section-header">
-                        <h2>Become A Volunteer</h2>
-                        <h3 style="color:white"><b>Prophet Muhammad(ﷺ)advised us:</b></h3>
-                        <p> to take advantage of five before five:</p>
-                        <p><b>"Take advantage of five maters before five other matters"</b></p>
-                        <ol style="color:white">
-                            <li>Your youth,before you become old</li>
-                            <li>Your health,before you fall sick </li>
-                            <li>Your wealth,before you become poor</li>
-                            <li>Your free time,before you become busy</li>
-                            <li>And your life,before you death</li>
-                        </ol>
-                        <p>Allah has blessed each human being at least with one of the following: </p>
-                        <ul style="color:white">
-                            <li>Time</li>
-                            <li>Wealth</li>
-                            <li>Health</li>
-                        </ul>
-                    </div>
-                    <div class="volunteer-text">
-                        <p>
-                            If,I have all the above,then I must be more thankful to Allah amd try my best to utilize these in the way(s) described in Quran and Hadith.This is the only way I can be successful in this world and in the life after.
-                        </p>
-                        <p><u>Darul-Aman</u> is one of the biggest projects and needs people with their prayers(Dua),skills,money,time and much more.</p>
-                        <p>Think out of the box and ask yourself<b>"how can I support and be part of this project?"</b></p>
-                        <p>If you support this project in a regular basis,then you are considered as the Member of Darul-Aman otherwise a Volunteer</p>
-
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Volunteer End -->
-<!-- Contact Start -->
-<div class="single">
-    <div class="container">
+    <!-- Volunteer End -->
+    <!-- Contact Start -->
+    <div class="single">
+        <div class="container">
 
-        <div class="row">
-            <div class=" col-md-12">
-                <div class="form2">
-                    <div class="comment-form">
-                        <center> <h1 style="color:#FDBE33;">Contact for any query</h1></center><br />
+            <div class="row">
+                <div class=" col-md-12">
+                    <div class="form2">
+                        <div class="comment-form">
+                            <center> <h1 style="color:#FDBE33;">Contact for any query</h1></center><br />
 
 
-                        <div id="success"></div>
-                        <form action="/Home/SubmitContact" method="post">
-                            <div class="control-group">
-                                <input type="text" class="form-control" name="FIRST_NAME" placeholder="Your First Name" required="required" data-validation-required-message="Please enter your name" style="cursor:auto" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" name="LAST_NAME" placeholder="Your Last Name" required="required" data-validation-required-message="Please enter your name" style="cursor:auto" />
-                                <p class="help-block text-danger"></p>
+                            <div id="success"></div>
+                            <form action="/Home/SubmitContact" method="post">
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="FIRST_NAME" placeholder="Your First Name" required="required" data-validation-required-message="Please enter your name" style="cursor:auto" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" name="LAST_NAME" placeholder="Your Last Name" required="required" data-validation-required-message="Please enter your name" style="cursor:auto" />
+                                    <p class="help-block text-danger"></p>
 
-                            </div>
-                            <div>
-                                <input type="email" class="form-control" name="EMAIL" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" style="cursor:auto" />
-                                <p class="help-block text-danger"></p>
+                                </div>
+                                <div>
+                                    <input type="email" class="form-control" name="EMAIL" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" style="cursor:auto" />
+                                    <p class="help-block text-danger"></p>
 
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="idfor" name="ID" placeholder="Your ID" required="required" onkeypress="return funvalid()" style="cursor:auto" />
-                                <p class="help-block text-danger"></p>
-                                <div id="message" style="color:red"></div>
-                            </div>
-                            <div class="control-group">
-                                <input type="number" class="form-control" name="CONTACT" pattern="/^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g" placeholder="Your Contact" required="required" style="cursor:auto" />
-                                <div id="message" style="color:red"></div>
-                                <p class="help-block text-danger"></p>
-                            </div>
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="idfor" name="ID" placeholder="Your ID" required="required" onkeypress="return funvalid()" style="cursor:auto" />
+                                    <p class="help-block text-danger"></p>
+                                    <div id="message" style="color:red"></div>
+                                </div>
+                                <div class="control-group">
+                                    <input type="number" class="form-control" name="CONTACT" pattern="/^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g" placeholder="Your Contact" required="required" style="cursor:auto" />
+                                    <div id="message" style="color:red"></div>
+                                    <p class="help-block text-danger"></p>
+                                </div>
 
-                            <div class="control-group">
-                                <textarea class="form-control" name="MESSAGE" placeholder="Message" required="required" data-validation-required-message="Please enter your message" style="cursor:auto">
+                                <div class="control-group">
+                                    <textarea class="form-control" name="MESSAGE" placeholder="Message" required="required" data-validation-required-message="Please enter your message" style="cursor:auto">
                         </textarea>
 
-                            </div> <br />
-                            <div>
-                                <button class="btn btn-block btn-custom" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
+                                </div> <br />
+                                <div>
+                                    <button class="btn btn-block btn-custom" type="submit" id="sendMessageButton">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Contact End -->
+    <!-- Contact End -->

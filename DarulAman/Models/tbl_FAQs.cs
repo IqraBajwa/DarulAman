@@ -11,13 +11,12 @@ namespace DarulAman.Models
         [Key]
         public int FAQ_ID { get; set; }
 
-        [StringLength(500)]
         [Required]
+        [StringLength(500)]
         public string FAQ_QUESTION { get; set; }
 
-        [StringLength(500)]
         [Required]
+        [StringLength(500)]
         public string FAQ_ANSWER { get; set; }
-
     }
 }

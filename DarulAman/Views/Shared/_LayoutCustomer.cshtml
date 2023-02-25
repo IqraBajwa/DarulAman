@@ -13,6 +13,66 @@
 
         <link href="~/Content/Customer/img/Logoicon.ico" rel="icon" type="image/png" />
         <style>
+            /***prayerbox***/
+            .prayerbox {
+                padding: 2rem 2rem 2rem 2rem;
+                margin: 20px 20px 20px 20px;
+                width: 90%;
+                height: 450px;
+                border: 3px solid #dedede;
+                background-image: linear-gradient(#dedede, white);
+                box-shadow: 10px 10px revert;
+                border-radius: 50px 50px
+            }
+            /****supporttext**/
+            .supporttext {
+                color: #FDBE33;
+                font-size: xx-large;
+               margin-left: 10px;
+            }
+            /**teamusericon**/
+            .teamusericon {
+                margin: 15px 18px;
+                color:#FDBE33;
+                font-weight:bolder;
+            }
+            /*teamusericon*/
+            .teamarchiveicon {
+                margin: 15px 18px;
+                color: #FDBE33;
+            }
+            /*teamusericon*/
+            .teamusericon {
+                margin: 15px 18px;
+                color: #FDBE33;
+            }
+                /**supportli**/
+                .supportli {
+                    font-size: x-large;
+                    color: #4a4c70;
+                }
+                /*teamtextbox*/
+            .teamtextbox {
+                border: 2px solid #FDBE33;
+                background-color: #f1e9d5;
+                box-shadow: 0 5px 5px 0 #FDBE33;
+                border-radius: 50px 50px;
+                margin: 5px 5px 5px 5px;
+                padding: 15px 15px 15px 15px;
+            }
+            /*teamblocktext*/
+            .teamblocktext {
+                border: 1px solid #FDBE33;
+                background-color: #f1e9d5;
+                box-shadow: 0 5px 5px 0 #FDBE33;
+            }
+             /*teamblocktext*/
+            .teamblocktextproject {
+                border: 1px solid #FDBE33;
+                background-color: #f1e9d5;
+                color: #4a4c70;
+                box-shadow: 0 5px 5px 0 #FDBE33;
+            }
             /*       drop down    */
             .dropdown-menu li {
                 position: relative;
@@ -48,8 +108,45 @@
                 background: #ededed;
                 font-family: 'Open Sans', sans-serif;
             }
-
-
+            /*****community btn**/
+            .communitybtn {
+                padding: 10px 7px;
+                color: #FDBE33;
+                font-weight: 800;
+            }
+            /*navbaritem*/
+            .navbaritem {
+               padding: 0 0 0 4px;
+            }
+            /****teamtilte*****/
+            .teamtitle{
+                font-weight: bold;
+                color: #FDBE33;
+            }
+            /***p***/
+            .p {
+                margin-top: 0;
+                color: #6c757d;
+               margin-bottom: 1rem;
+            }
+            /****teamsubtitle****/
+                .teamsubtitle{
+            color: black;
+            margin: 0px 0px 0px 15px;
+            font-size: medium;
+            font-family: 'Times New Roman';
+            }
+            /***** teamtext*****/
+            .teamtext {
+                margin: 0 18px 0 0;
+                color: #4a4c70;
+            }
+            /**************contactemailblock*******/
+            .contactemailblock {
+                border: 1px solid #FDBE33;
+                background-image: linear-gradient(#FDBE33,#edca7d47,#edca7d47);
+                border-radius: 50px 50px;
+            }
             /** Custom Select **/
             .custom-select-wrapper {
                 position: relative;
@@ -180,7 +277,8 @@
             /***************Login bar*************************/
             #login {
                 font-size: 30px;
-                color: lightseagreen;
+                color: #2199e8;
+               
             }
             /***************hover*************************/
             #option:hover {
@@ -244,7 +342,7 @@
                         <div class="top-bar-center">
                             <div>
                                 <a href="@Url.Action("GeneralRegistration","Home")" class="embed-responsive">
-                                    <input type="button" style="padding:10px 7px;color:#FDBE33;font-weight:800" value="To meet your Community Click here" class="btn btn-link embed-responsive">
+                                    <input type="button" class="btn btn-link  communitybtn embed-responsive align-content-center text-center text-widget"  value="To meet your Community Click here"/>
                                 </a>
                             </div>
                         </div>
@@ -291,7 +389,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sub-Projects</a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#" class="dropdown-item" data-toggle="dropdown">Darul-Uloom<i class="fa fa-caret-down" style="padding:0 0 0 4px"></i></a>
+                                    <a href="#" class="dropdown-item" data-toggle="dropdown">Darul-Uloom<i class="fa fa-caret-down navbaritem"></i></a>
                                     <ul class="dropdown-menu dropdown-submenu">
                                         <li><a href="@Url.Action("Teaching","Home")" class="dropdown-item">Teaching Quran & Hadith</a></li>
                                         <li><a href="@Url.Action("School","Home")" class="dropdown-item">Islamic School</a></li>
@@ -301,7 +399,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="" class="dropdown-item">Islamic Services<i class="fa fa-caret-down" style="padding:0 0 0 4px"></i></a>
+                                    <a href="" class="dropdown-item">Islamic Services<i class="fa fa-caret-down navbaritem"></i></a>
                                     <ul class="dropdown-menu dropdown-submenu">
                                         <li>
                                             <a href="@Url.Action("Translation","Home")" class="dropdown-item">Translation Services</a>
@@ -323,7 +421,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="@Url.Action("Library","Home")" class="dropdown-item">Islamic Library<i style="padding:0 0 0 4px"></i></a>
+                                    <a href="@Url.Action("Library","Home")" class="dropdown-item">Islamic Library<i class="navbaritem"></i></a>
 
                                 </li>
                             </ul>

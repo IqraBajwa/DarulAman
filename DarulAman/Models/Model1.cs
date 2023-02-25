@@ -8,11 +8,10 @@ namespace DarulAman.Models
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
-       
         public virtual DbSet<tbl_AccessLevel> tbl_AccessLevel { get; set; }
         public virtual DbSet<tbl_Admin> tbl_Admin { get; set; }
         public virtual DbSet<tbl_Book> tbl_Book { get; set; }
@@ -48,7 +47,10 @@ namespace DarulAman.Models
                 .HasForeignKey(e => e.CATEGORY_FID)
                 .WillCascadeOnDelete(false);
 
-          
+            modelBuilder.Entity<tbl_DeadRelative>()
+                .HasOptional(e => e.tbl_DeadRelative1)
+                .WithRequired(e => e.tbl_DeadRelative2);
+
             modelBuilder.Entity<tbl_DeadRelative>()
                 .HasMany(e => e.tbl_Decreased)
                 .WithRequired(e => e.tbl_DeadRelative)

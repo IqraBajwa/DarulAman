@@ -51,13 +51,12 @@ namespace DarulAman.Models
         [StringLength(50)]
         public string COURSE { get; set; }
 
-         [StringLength(20)]
+        [StringLength(20)]
         public string STATUS { get; set; }
 
         [StringLength(200)]
         public string MESSAGE { get; set; }
 
-        [Column(TypeName = "datetime")]
         public DateTime DATE { get; set; }
     }
 }

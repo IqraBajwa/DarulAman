@@ -33,7 +33,7 @@
             <div class="section-header">
                 <div class="section-header text-center">
                     <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
-                    <iframe title="Prayer Timing" style="padding: 2rem 2rem 2rem 2rem; margin:20px 20px 20px 20px; width: 90%; height: 450px; border: 3px solid #dedede; background-image: linear-gradient(#dedede, white); box-shadow: 10px 10px revert; border-radius: 50px 50px " scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
+                    <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
                 </div>
             </div>
         </div>
@@ -41,155 +41,146 @@
 </div>
 
 <!-- Prayer -->
-<div class="container">
-    <div class="section-header text-center">
-
-        <h2 style="color:#FDBE33">Darul Aman Team Blocks</h2>
-    </div>
-</div>
-
-@foreach (var i in List)
-{
-    <div class="container horizontal">
-        <div class="row mt-3">
-            <div class="col-lg-12 col-sm-6">
-               <center>
-                   <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);width:25rem; height:max-content">
-                       <center>
-                           <div class="col-lg-12 col-md-6">
-
-                               <img src="@Url.Content(i.PICTURE).ToString()" class="card-img-top" width="300" height="300" alt="..." />
-
-                           </div>
-
-                           <div class="card-body">
-                               <h3> <i class="fa fa-user" style="margin: 0 18px 0 0;color:#FDBE33"></i>  @i.FIRST_NAME @i.LAST_NAME</h3>
-                           </div>
-                           <hr />
-
-                           <ol class="list-group list-group-flush" style="list-style:none">
-                               <li>
-                                 
-                                   <h5><i class="fa fa-archive" style="margin: 0 18px 0 0; color: #FDBE33"></i> @i.RESPONSIBILITIES</h5>
-                               </li>
-
-                           </ol>
-                           <hr />
-
-                           @if (i.RESPONSIBILITIES == "Managing Director")
-                           {
-                               <div class="card-body conatiner" style="border: 1px solid rgba(0, 0, 0, 0.2); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); border-radius: 50px 50px; margin: 5px 12px 5px 12px">
-                                   <ol>
-                                       <li>
-                                           The male director is responsible for the whole organization
-
-                                       </li>
-                                       <li>
-                                           The female director is only responsible for the women
-
-                                       </li>
-                                       <li>
-                                           All decisions will only be made after consultation (Mashwara) with the
-                                           whole team of the organization
-                                       </li>
-                                   </ol>
-
-                               </div>
-                           }
-                           else if (i.RESPONSIBILITIES == "Administration")
-                           {
-                               <div class="card-body conatiner" style="border:1px solid rgba(0, 0, 0, 0.2);border-radius:50px 50px;margin:5px 12px 5px 12px">
-                                   <ol class="text align-content-center" style="list-style:disclosure-closed;">
-                                       <li>
-                                           Finance management
-                                       </li>
-                                       <li>
-                                           Managing the website and social media
-                                       </li>
-                                       <li>
-                                           Responding to official letters
-                                       </li>
-                                       <li>
-                                           Organizing the Darul Aman meetings
-                                       </li>
-                                   </ol>
-
-                               </div>
-                           }
-                           else if (i.RESPONSIBILITIES == "Representatives")
-                           {
-                               <div class="card-body conatiner" style="border:1px solid rgba(0, 0, 0, 0.2);border-radius:50px 50px;margin:5px 12px 5px 12px">
-                                   <ol class="text align-content-center" style="list-style:disclosure-closed;">
-                                       <li>
-                                           Male and female representatives of each nationality
-                                       </li>
-                                       <li>
-                                           Representatives of the students
-                                       </li>
-                                       <li>
-                                           A connection between Darul Aman and their community
-                                       </li>
-                                   </ol>
-
-                               </div>
-                           }
-                           else if (i.RESPONSIBILITIES == "Member")
-                           {
-                               <div class="card-body conatiner" style="border:1px solid rgba(0, 0, 0, 0.2);border-radius:50px 50px;margin:5px 12px 5px 12px">
-                                   <ol class="text align-content-center" style="list-style:disclosure-closed;">
-                                       <li>
-                                           Membership of the Darul Aman is open to all
-                                       </li>
-                                   </ol>
-
-                               </div>
-                           }
-                           else
-                           {
-
-                           }
-                       </center>
-                   </div>
-               </center></div>
-            <br />
-            <br />
-        </div>
-    </div>
-}
-<!-- Team Start -->
-<div class="team">
+<div class="causes">
     <div class="container">
         <div class="section-header text-center">
-            <p>Darul Aman Team</p>
-
+            <p style="color:#4a4c70">About Our Team</p>
+            <h2 style="color:#FDBE33">Darul Aman Team Blocks</h2>
         </div>
-
-        <div class="row">
-            @foreach (var te in Model)
+        <div class="owl-carousel causes-carousel">
+            @foreach (var i in List)
             {
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="@Url.Content(te.PICTURE)" />
-                        </div>
-                        <div class="team-text">
-                            <h2>@te.FIRST_NAME @te.LAST_NAME</h2>
-                            <p1>@te.RESPONSIBILITIES</p1><br />
-                            <p1><i class="fa fa-" style="margin-left:3px"></i>@te.PROFESSION</p1>
-                            <br />
-                            <p1>@te.LANGUAGES</p1><br />
+                <div class="causes-item">
+                    <div class="causes-img">
+                       <img src="@Url.Content(i.PICTURE).ToString()" alt="Image" />
+                    </div>
+                  
+                    <div class="causes-text">
+                        <h2 style="color: #4a4c70;font-weight:bolder"> <i class="fa fa-user teamusericon"></i> <span> @i.FIRST_NAME @i.LAST_NAME</span></h2>
+                        <hr />  <h5 style="color: #4a4c70;"><i class="fa fa-archive teamarchiveicon"></i><span> @i.RESPONSIBILITIES</span></h5>
+
+                        <hr />
+                    </div>
+                    <div class="text-center">
+                        @if (i.RESPONSIBILITIES == "Managing Director")
+                        {
+                            <div class="conatiner teamtextbox">
+                                <ol class="text align-content-center" style="list-style:disclosure-closed;">
+                                    <li>
+                                        The male director is responsible for the whole organization
+
+                                    </li>
+                                    <li>
+                                        The female director is only responsible for the women
+
+                                    </li>
+                                    <li>
+                                        All decisions will only be made after consultation (Mashwara) with the
+                                        whole team of the organization
+                                    </li>
+                                </ol>
+
+                            </div>
+                        }
+                        else if (i.RESPONSIBILITIES == "Administration")
+                        {
+                            <div class="conatiner teamtextbox">
+                                <ol class="text align-content-center" style="list-style:disclosure-closed;">
+                                    <li>
+                                        Finance management
+                                    </li>
+                                    <li>
+                                        Managing the website and social media
+                                    </li>
+                                    <li>
+                                        Responding to official letters
+                                    </li>
+                                    <li>
+                                        Organizing the Darul Aman meetings
+                                    </li>
+                                </ol>
+
+                            </div>
+                        }
+                        else if (i.RESPONSIBILITIES == "Representatives")
+                        {
+                            <div class="conatiner teamtextbox">
+                                <ol class="text align-content-center" style="list-style:disclosure-closed;">
+                                    <li>
+                                        Male and female representatives of each nationality
+                                    </li>
+                                    <li>
+                                        Representatives of the students
+                                    </li>
+                                    <li>
+                                        A connection between Darul Aman and their community
+                                    </li>
+                                </ol>
+
+                            </div>
+                        }
+                        else if (i.RESPONSIBILITIES == "Member")
+                        {
+                            <div class="conatiner teamtextbox">
+                                <ol class="text align-content-center" style="list-style:disclosure-closed;">
+                                    <li>
+                                        Membership of the Darul Aman is open to all
+                                    </li>
+                                </ol>
+
+                            </div>
+                        }
+                        else
+                        {
 
 
 
-                        </div>
+                        }
+
                     </div>
                 </div>
-
             }
-
-
-
-        </div>
+            </div>
     </div>
 </div>
-<!---Team End -->
+
+        <!-- Teamblock End -->
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p style="color: #4a4c70">About Our Team</p>
+                    <h2>Meet Darul Aman Team </h2>
+                </div>
+
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-3 col-md-6">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="@Url.Content(item.PICTURE)" />
+                                </div>
+
+                                <div class="conatiner">
+                                    <div class="team-text teamblocktext">
+                                        <h2>@item.FIRST_NAME @item.LAST_NAME</h2>
+                                        <p1>@item.RESPONSIBILITIES</p1><br />
+                                        <p1><i class="fa fa-" style="margin-left:3px"></i>@item.PROFESSION</p1>
+                                        <br />
+                                        <p1>@item.LANGUAGES</p1><br />
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+        <!---Team End -->

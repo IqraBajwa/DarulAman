@@ -1,9 +1,9 @@
-﻿@model DarulAman.Models.tbl_DeadRelative
-
+﻿@model IEnumerable<DarulAman.Models.tbl_DeadRelative>
+@using DarulAman.Models
 @{
+    Model1 db = new Model1();
     ViewBag.Title = "Details";
 }
-
 <div class="midde_cont">
     <div class="container-fluid">
         <div class="row column_title">
@@ -15,101 +15,185 @@
         </div>
     </div>
 </div>
-<div>
-    <p class="heading" align="center">Funeral Registration</p>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            FIRST_NAME
-        </dt>
+@foreach (var o in Model)
+{
+    <div class="midde_cont">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="white_shd full margin_bottom_30">
+                        <div class="full graph_head">
+                            <div class="heading1 margin_0">
+                                <h2>Late Person's Relative</h2>
+                            </div>
+                        </div>
+                        <div class="table_section padding_infor_info">
+                            <div class="table-responsive-sm">
+                                <table class="table table-active table-bordered">
 
-        <dd>
-            @Html.DisplayFor(model => model.FIRST_NAME)
-        </dd>
+                                    <tr>
 
-        <dt>
-            LAST_NAME
-        </dt>
+                                        <th>
+                                            FIRST_NAME
+                                        </th>
+                                        <th>
+                                            LAST_NAME
+                                        </th>
+                                        <th>
+                                            CONTACT
+                                        </th>
+                                        <th>
+                                            EMAIL
+                                        </th>
+                                        <th>
+                                            RELATION_WITH_DEAD
+                                        </th>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            DATE_OF_FUNERAL
+                                        </th>
+                                        <th>
+                                            ORIGIN
+                                        </th>
+                                        <th>
+                                            MESSAGE
+                                        </th>
+                                        <th>
+                                            CONDITION
+                                        </th>
+                                        <th>
+                                            DATE
+                                        </th>
 
-        <dd>
-            @Html.DisplayFor(model => model.LAST_NAME)
-        </dd>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @o.FIRST_NAME
+                                        </td>
+                                        <td>
+                                            @o.LAST_NAME
+                                        </td>
+                                        <td>
+                                            @o.CONTACT
+                                        </td>
+                                        <td>
+                                            @o.EMAIL
+                                        </td>
+                                        <td>
+                                            @o.RELATION_WITH_DEAD
+                                        </td>
+                                        <td>
+                                            @o.ID
+                                        </td>
+                                        <td>
+                                            @o.DATE_OF_FUNERAL
+                                        </td>
+                                        <td>
+                                            @o.ORIGIN
+                                        </td>
+                                        <td>
+                                            @o.MESSAGE
+                                        </td>
+                                        <td>
+                                            @o.CONDITION
+                                        </td>
+                                        <td>
+                                            @o.DATE
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------Late person------------------------------>
+    <div class="midde_cont">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="white_shd full margin_bottom_30">
+                        <div class="full graph_head">
+                            <div class="heading1 margin_0">
+                                <h2>Late Person Information</h2>
+                            </div>
+                        </div>
+                        <div class="table_section padding_infor_info">
+                            <div class="table-responsive-sm">
+                                <table class="table table-active table-bordered">
+                                    <tr>
 
-        <dt>
-            CONTACT
-        </dt>
+                                        <th>
+                                            CONTACTED PRSON
+                                        </th>
+                                        <th>
+                                            FIRST_NAME
+                                        </th>
+                                        <th>
+                                            LAST_NAME
+                                        </th>
+                                        <th>
+                                            AGE
+                                        </th>
+                                        <th>
+                                            GENDER
+                                        </th>
+                                        <th>
+                                            DATE_OF_DEATH
+                                        </th>
+                                        <th>
+                                            STATUS
+                                        </th>
+                                        <th>
+                                            DATE
+                                        </th>
+                                        <th></th>
+                                    </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.CONTACT)
-        </dd>
+                                    @foreach (var od in o.tbl_Decreased)
+                                    {
 
-        <dt>
-            EMAIL
-        </dt>
+                                        <tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.EMAIL)
-        </dd>
 
-        <dt>
-            RELATION_WITH_DEAD
-        </dt>
+                                            <td>
+                                                @od.FIRST_NAME
+                                            </td>
+                                            <td>
+                                                @od.LAST_NAME
+                                            </td>
+                                            <td>
+                                                @od.AGE
+                                            </td>
+                                            <td>
+                                                @od.GENDER
+                                            </td>
+                                            <td>
+                                                @od.DATE_OF_DEATH
+                                            </td>
+                                            <td>
+                                                @od.STATUS
+                                            </td>
+                                            <td>
+                                                @od.DATE
+                                            </td>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.RELATION_WITH_DEAD)
-        </dd>
-
-        <dt>
-            ID
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID)
-        </dd>
-
-        <dt>
-            DATE_OF_FUNERAL
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DATE_OF_FUNERAL)
-        </dd>
-
-        <dt>
-            ORIGIN
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ORIGIN)
-        </dd>
-
-        <dt>
-            MESSAGE
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MESSAGE)
-        </dd>
-
-        <dt>
-            CONDITION
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CONDITION)
-        </dd>
-
-        <dt>
-            DATE
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DATE)
-        </dd>
-
-    </dl>
-</div>
-<div align="center">
-    <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> |
-    <a href="@Url.Action("Edit", "tbl_Book", new { id = Model.FUNERAL_ID})" class="custombtn">Edit</a>
-</div>
+    <div align="center">
+        <button class="indexback">@Html.ActionLink("Back to List", "Index") </button> 
+    
+    </div>
+}

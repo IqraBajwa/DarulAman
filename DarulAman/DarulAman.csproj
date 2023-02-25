@@ -523,6 +523,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Customer\css\style.css" />
     <Content Include="Content\Customer\img\blue-mosque-istanbul.jpg" />
+    <Content Include="Content\Customer\img\Darul Aman PNG.png" />
     <Content Include="Content\Customer\img\darulaman.png" />
     <Content Include="Content\Customer\img\donate.jpg" />
     <Content Include="Content\Customer\img\emailpic.png" />

@@ -31,10 +31,8 @@ namespace DarulAman.Models
         [StringLength(100)]
         public string REASON { get; set; }
 
-        [Column(TypeName = "datetime")]
         public DateTime DATE { get; set; }
 
-       
         [StringLength(50)]
         public string STATUS { get; set; }
     }

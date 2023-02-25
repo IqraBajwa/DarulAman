@@ -13,9 +13,10 @@ namespace DarulAman.Models
 
         [StringLength(100)]
         public string SLIDER_PICTURE { get; set; }
-        [StringLength(500)]
 
+        [StringLength(500)]
         public string SLIDER_DETAIL1 { get; set; }
+
         [StringLength(500)]
         public string SLIDER_DETAIL2 { get; set; }
 

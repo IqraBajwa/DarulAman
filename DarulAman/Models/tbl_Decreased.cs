@@ -30,12 +30,11 @@ namespace DarulAman.Models
         [Column(TypeName = "date")]
         public DateTime DATE_OF_DEATH { get; set; }
 
-
         [StringLength(10)]
         public string STATUS { get; set; }
 
-        [Column(TypeName = "datetime")]
         public DateTime DATE { get; set; }
+
         public int FUNERAL_FID { get; set; }
 
         public virtual tbl_DeadRelative tbl_DeadRelative { get; set; }

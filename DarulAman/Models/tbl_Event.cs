@@ -1,7 +1,6 @@
 namespace DarulAman.Models
 {
     using System;
-    using System.Web;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -19,11 +18,9 @@ namespace DarulAman.Models
         [Column(TypeName = "date")]
         public DateTime EVENT_DATE { get; set; }
 
-       
         [StringLength(50)]
         public string EVENT_DESCRIPTION { get; set; }
 
-        
         [StringLength(100)]
         public string EVENT_PICTURE { get; set; }
 

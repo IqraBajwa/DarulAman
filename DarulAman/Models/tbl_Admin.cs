@@ -33,10 +33,10 @@ namespace DarulAman.Models
 
         [Required]
         [StringLength(200)]
-        public string ADDRESS { get; set; } 
+        public string ADDRESS { get; set; }
 
         [StringLength(10)]
-        public string STATUS{ get; set; }
+        public string STATUS { get; set; }
 
         public int ACCESS_LEVEL_FID { get; set; }
 

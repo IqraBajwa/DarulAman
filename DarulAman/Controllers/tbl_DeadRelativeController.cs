@@ -27,12 +27,12 @@ namespace DarulAman.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tbl_DeadRelative tbl_DeadRelative = db.tbl_DeadRelative.Find(id);
-            if (tbl_DeadRelative == null)
+             var o = db.tbl_DeadRelative.Where(x => x.FUNERAL_ID == id).ToList();
+            if ( o== null)
             {
                 return HttpNotFound();
             }
-            return View(tbl_DeadRelative);
+            return View(o);
         }
 
       
