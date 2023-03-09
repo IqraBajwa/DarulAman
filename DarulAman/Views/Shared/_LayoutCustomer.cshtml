@@ -2,238 +2,243 @@
 @{
     Model1 db = new Model1();
 }
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>DarulAman</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DarulAman</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
 
-        <link href="~/Content/Customer/img/Logoicon.ico" rel="icon" type="image/png" />
-
-
-
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="~/Content/Customer/css/Cutomizedstyle.css" rel="stylesheet" />
-        <link href="~/Content/Customer/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="~/Content/Customer/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="~/Content/Customer/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="~/Content/Customer/css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <!-- Top Bar Start -->
-        <div class="top-bar d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 embed-responsive">
-                        <div class="top-bar-left">
-                            <div class="text embed-responsive ">
-                                <i class="fa fa-phone-alt" style="font-size:small"></i>
-                                <p style="font-size:small">@db.tbl_Institute.Select(x => x.INSTITUTE_CONTACT).FirstOrDefault()</p>
-                            </div>
-
-                            <div class="text embed-responsive">
-                                <i class="fa fa-envelope"></i>
-                                <p>@db.tbl_Institute.Select(x => x.INSTITUTE_EMAIL).FirstOrDefault()</p>
-                            </div>
+    <link href="~/Content/Customer/img/Logoicon.ico" rel="icon" type="image/png" />
 
 
-                        </div>
-                    </div>
 
-                    <div class="col-md-4 embed-responsive">
-                        <div class="top-bar-center embed-responsive">
-                            <div class="text-center">
-                                <a href="@Url.Action("GeneralRegistration","Home")" class="embed-responsive regular-link">
-                                    @*<input type="button" class="btn communitybtn btn-link btn-block align-content-center text-center text-widget"  value="To meet your Community Click here"/>*@
-                                    <button class="communitybtn">To meet your Community Click here </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 embed-responsive">
-                        <div class="top-bar-right embed-responsive">
-                            <div class="text embed-responsive">
-                                <i class="fa fa-globe fa-caret-down"> </i>
-                                <div id="google_translate_element"
-                                     class="btnresponsive">
-                                </div>
-                            </div>
-                            <div class="text embed-responsive">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <p class="btnresponsive">Magdeburg,Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- Top Bar End -->
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
-                <a href="@Url.Action("IndexCustomer","Home")" class="navbar-brand">
-                    <img src="~/Content/Customer/img/WhatsApp Image 2022-12-11 at 10.00.37 PM.jpeg" />
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/Content/Customer/css/Cutomizedstyle.css" rel="stylesheet" />
+    <link href="~/Content/Customer/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="~/Content/Customer/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Content/Customer/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Template Stylesheet -->
+    <link href="~/Content/Customer/css/style.css" rel="stylesheet">
+</head>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="@Url.Action("IndexCustomer","Home")" class="nav-item nav-link ">Home</a>
-                        <a href="@Url.Action("Mosque","Home")" class="nav-item nav-link">Mosque</a>
-                        <a href="@Url.Action("Prayer","Home")" class="nav-item nav-link">Prayer</a>
-
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sub-Projects</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#" class="dropdown-item" data-toggle="dropdown">Darul-Uloom<i class="fa fa-caret-down navbaritem"></i></a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                        <li><a href="@Url.Action("Teaching","Home")" class="dropdown-item">Teaching Quran & Hadith</a></li>
-                                        <li><a href="@Url.Action("School","Home")" class="dropdown-item">Islamic School</a></li>
-
-
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="" class="dropdown-item">Islamic Services<i class="fa fa-caret-down navbaritem"></i></a>
-                                    <ul class="dropdown-menu dropdown-submenu">
-                                        <li>
-                                            <a href="@Url.Action("Translation","Home")" class="dropdown-item">Translation Services</a>
-
-                                        </li>
-                                        <li>
-                                            <a href="@Url.Action("DeadRelative","Home")" class="dropdown-item">Islamic Funeral</a>
-
-                                        </li>
-                                        <li><a href="@Url.Action("Marriage","Home")" class="dropdown-item">Marriage Ceremony</a></li>
-
-                                        <li><a href="@Url.Action("Slaughterhouse","Home")" class="dropdown-item">Halal Slaughter House</a></li>
-                                        <li>
-                                            <a href="@Url.Action("Gym","Home")" class="dropdown-item">GYM</a>
-
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="@Url.Action("Library","Home")" class="dropdown-item">Islamic Library<i class="navbaritem"></i></a>
-
-                                </li>
-                            </ul>
-
+<body>
+    <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 embed-responsive">
+                    <div class="top-bar-left">
+                        <div class="text embed-responsive ">
+                            <i class="fa fa-phone-alt" style="font-size:small"></i>
+                            <p style="font-size:small">@db.tbl_Institute.Select(x => x.INSTITUTE_CONTACT).FirstOrDefault()</p>
                         </div>
 
-                        <a href="@Url.Action("Event","Home")" class="nav-item nav-link">Events</a>
-                        <a href="@Url.Action("Volunteer","Home")" class="nav-item nav-link">Volunteer</a>
-                        <a href="@Url.Action("Team","Home")" class="nav-item nav-link">Team</a>
-                        <a href="@Url.Action("About","Home")" class="nav-item nav-link">About</a>
-                        <a href="@Url.Action("Contact","Home")" class="nav-item nav-link">Contact</a>
-                        <a href="@Url.Action("SupportUs","Home")" class="nav-item nav-link">SupportUs</a>
+                        <div class="text embed-responsive">
+                            <i class="fa fa-envelope"></i>
+                            <p>@db.tbl_Institute.Select(x => x.INSTITUTE_EMAIL).FirstOrDefault()</p>
+                        </div>
 
-                        <a href="https://gofund.me/e25a0e41" class="btn btn-warning">GoFundMe</a>
-                        <a href="@Url.Action("Login","Home")" id="login" class="nav-item nav-link fa fa-user" title="Admin login"></a>
 
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Nav Bar End -->
 
-        @RenderBody()
-
-
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-contact">
-                            <h2>Mosque</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>Magdeburg, Germany</p>
-                            <p><i class="fa fa-phone-alt"></i>@db.tbl_Institute.Select(x => x.INSTITUTE_CONTACT).FirstOrDefault()</p>
-                            <p><i class="fa fa-envelope"></i>@db.tbl_Institute.Select(x => x.INSTITUTE_EMAIL).FirstOrDefault()</p>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-link">
-                            <h2>Popular Links</h2>
-                            <a href="@Url.Action("About","Home")">About Us</a>
-                            <a href="@Url.Action("Contact","Home")">Contact Us</a>
-                            <a href="@Url.Action("Event","Home")">Upcoming Events</a>
-                            <a href="@Url.Action("Team","Home")">Our Team</a>
-                            <a href="@Url.Action("GeneralRegistration","Home")">
-                                To meet your community <br />
-                                <label style="margin:0 1rem" class="option-hover">Click Here</label>
+                <div class="col-md-4 embed-responsive">
+                    <div class="top-bar-center embed-responsive">
+                        <div class="text-center">
+                            <a href="@Url.Action("GeneralRegistration","Home")" class="embed-responsive regular-link">
+                                @*<input type="button" class="btn communitybtn btn-link btn-block align-content-center text-center text-widget"  value="To meet your Community Click here"/>*@
+                                <button class="communitybtn">To meet your Community Click here </button>
                             </a>
-
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-link">
-                            <h2>Useful Links</h2>
-                            <a href="@Url.Action("Termsofuse","Home")">Terms of use</a>
-                            <a href="@Url.Action("PrivacyPolicy","Home")">Privacy policy</a>
-
-                            <a href="@Url.Action("FAQs","Home")">FAQs</a>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-            <div class="container copyright">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>&copy; <a href="@Url.Action("IndexCustomer","Home")">Darul Aman</a>, All Right Reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>Designed By <a href="@Url.Action("About","Home")">PakiExperts </a></p>
+                <div class="col-md-4 embed-responsive">
+                    <div class="top-bar-right embed-responsive">
+                        <div class="text embed-responsive">
+                            <i class="fa fa-globe fa-caret-down"> </i>
+                            <div id="google_translate_element"
+                                 class="btnresponsive">
+                            </div>
+                        </div>
+                        <div class="text embed-responsive">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <p class="btnresponsive"  style="font-size:smaller"><b>Haus des Schutzes:</b> Darul-Aman Magdeburg, Germany </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer End -->
-        <!-- Back to top button -->
-        <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-chevron-up"></i></a>
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
+    <!-- Top Bar End -->
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="@Url.Action("IndexCustomer","Home")" class="navbar-brand">
+                <img src="~/Content/Customer/img/WhatsApp Image 2022-12-11 at 10.00.37 PM.jpeg" />
+
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="@Url.Action("IndexCustomer","Home")" class="nav-item nav-link ">Home</a>
+                    <a href="@Url.Action("Mosque","Home")" class="nav-item nav-link">Mosque</a>
+                    <a href="@Url.Action("Prayer","Home")" class="nav-item nav-link">Prayer</a>
+
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sub-Projects</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="dropdown-item" data-toggle="dropdown">Darul-Uloom<i class="fa fa-caret-down navbaritem"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a href="@Url.Action("Teaching","Home")" class="dropdown-item">Teaching Quran </a></li>
+                                    <li><a href="@Url.Action("School","Home")" class="dropdown-item">Islamic School</a></li>
+
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="" class="dropdown-item">Islamic Services<i class="fa fa-caret-down navbaritem"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a href="@Url.Action("Translation","Home")" class="dropdown-item">Translation Services</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("DeadRelative","Home")" class="dropdown-item">Islamic Funeral</a>
+
+                                    </li>
+                                    <li><a href="@Url.Action("Marriage","Home")" class="dropdown-item">Marriage Ceremony</a></li>
+
+                                    <li><a href="@Url.Action("Slaughterhouse","Home")" class="dropdown-item">Halal Slaughter House</a></li>
+                                    <li>
+                                        <a href="@Url.Action("Gym","Home")" class="dropdown-item">GYM</a>
+
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="@Url.Action("Library","Home")" class="dropdown-item">Islamic Library<i class="navbaritem"></i></a>
+
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <a href="@Url.Action("Event","Home")" class="nav-item nav-link">Events</a>
+                    <a href="@Url.Action("Volunteer","Home")" class="nav-item nav-link">Volunteer</a>
+                    <a href="@Url.Action("Team","Home")" class="nav-item nav-link">Team</a>
+                    <a href="@Url.Action("About","Home")" class="nav-item nav-link">About</a>
+                    <a href="@Url.Action("Contact","Home")" class="nav-item nav-link">Contact</a>
+                    <a href="@Url.Action("SupportUs","Home")" class="nav-item nav-link">SupportUs</a>
+
+                    <a href="https://gofund.me/e25a0e41" class="btn btn-warning">GoFundMe</a>
+                    <a href="@Url.Action("Login","Home")" id="login" class="nav-item nav-link fa fa-user" title="Admin login"></a>
+
+                </div>
+            </div>
         </div>
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="~/Content/Customer/lib/easing/easing.min.js"></script>
-        <script src="~/Content/Customer/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="~/Content/Customer/lib/waypoints/waypoints.min.js"></script>
-        <script src="~/Content/Customer/lib/counterup/counterup.min.js"></script>
-        <script src="~/Content/Customer/lib/parallax/parallax.min.js"></script>
+    </div>
+    <!-- Nav Bar End -->
 
-        <!-- Contact Javascript File -->
-        <script src="~/Content/Customer/mail/jqBootstrapValidation.min.js"></script>
-        <script src="~/Content/Customer/mail/contact.js"></script>
+    @RenderBody()
 
-        <!-- Template Javascript -->
-        <script src="~/Content/Customer/js/main.js"></script>
-    </body>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Our Head Office</h2>
+                        <p style="font-size:smaller">
+                            <i class="fa fa-map-marker-alt text-warning"></i><b>Haus des Schutzes:</b>Darul-Aman
+                            <br />
+                            <label style="margin:0 1rem" class="option-hover"> Magdeburg, Germany</label>
+                        </p>
+                        <p style="font-size:smaller"><i class="fa fa-map-marker-alt text-warning"></i><b>Haus des Schutzes:</b> Darul-Aman Magdeburg, Germany </p>
+                        <p><i class="fa fa-phone-alt text-warning"></i>@db.tbl_Institute.Select(x => x.INSTITUTE_CONTACT).FirstOrDefault()</p>
+                        <p><i class="fa fa-envelope text-warning"></i>@db.tbl_Institute.Select(x => x.INSTITUTE_EMAIL).FirstOrDefault()</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-link">
+                        <h2>Popular Links</h2>
+                        <a href="@Url.Action("About","Home")">About Us</a>
+                        <a href="@Url.Action("Contact","Home")">Contact Us</a>
+                        <a href="@Url.Action("Event","Home")">Upcoming Events</a>
+                        <a href="@Url.Action("Team","Home")">Our Team</a>
+                        <a href="@Url.Action("GeneralRegistration","Home")">
+                            To meet your community <br />
+                            <label style="margin:0 1rem" class="option-hover">Click Here</label>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-link">
+                        <h2>Useful Links</h2>
+                        <a href="@Url.Action("Termsofuse","Home")">Terms of use</a>
+                        <a href="@Url.Action("PrivacyPolicy","Home")">Privacy policy</a>
+
+                        <a href="@Url.Action("FAQs","Home")">FAQs</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; <a href="@Url.Action("IndexCustomer","Home")">Darul Aman</a>, All Right Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Designed By <a href="@Url.Action("About","Home")">PakiExperts </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+        <div class="loader"></div>
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Customer/lib/easing/easing.min.js"></script>
+    <script src="~/Content/Customer/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Content/Customer/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/Content/Customer/lib/counterup/counterup.min.js"></script>
+    <script src="~/Content/Customer/lib/parallax/parallax.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="~/Content/Customer/mail/jqBootstrapValidation.min.js"></script>
+    <script src="~/Content/Customer/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/Content/Customer/js/main.js"></script>
+</body>
 </html>
 
 <script>
@@ -280,3 +285,21 @@
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+@*<div>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement
+                    ({
+                        pageLanguage: 'en',
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    },
+                        'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+
+        </script>
+    </div>*@  

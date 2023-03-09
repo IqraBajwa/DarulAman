@@ -6,20 +6,20 @@
 <div class="page-header">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            @*<div class="col-12">
 
-                <br />
-                <h3 style="color:#FDBE33">عَنْ أَبِي هُرَيْرَةَ قَالَ قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مَنْ سَلَكَ طَرِيقًا <br />يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ</h3><br />
+                    <br />
+                    <h3 style="color:#FDBE33">عَنْ أَبِي هُرَيْرَةَ قَالَ قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مَنْ سَلَكَ طَرِيقًا <br />يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ</h3><br />
 
-                <h4 style="color:#FDBE33">
-                    Abu Huraira reported: The Prophet(ﷺ) said;
-                </h4>
-                <p style="color:white">
-                    “Whoever travels a path in search of knowledge, Allah will make easy for him a path to Paradise.”
-                    <br />( Ṣaḥīḥ Muslim 2699)
-                </p>
+                    <h4 style="color:#FDBE33">
+                        Abu Huraira reported: The Prophet(ﷺ) said;
+                    </h4>
+                    <p style="color:white">
+                        “Whoever travels a path in search of knowledge, Allah will make easy for him a path to Paradise.”
+                        <br />( Ṣaḥīḥ Muslim 2699)
+                    </p>
 
-            </div>
+                </div>*@
             <div class="col-12">
                 <br /><br /> <h2>Islamic School</h2>
                 <a href="@Url.Action("IndexCustomer","Home")">Home</a>
@@ -31,41 +31,42 @@
 <!-- Page Header End -->
 <!-- Prayer -->
 
+@*<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-header">
+                <div class="section-header text-center">
+                    <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
+                  <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/2874545/shafi/6/0/13/13" data-dashlane-frameid="1122"> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+<!-- Prayer -->
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
             <div class="section-header">
                 <div class="section-header text-center">
                     <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
-                    <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
+                  <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/2874545/shafi/6/0/13/13" data-dashlane-frameid="1122"> </iframe>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Prayer -->
-<div class="section-header text-center">
-    <div class="carousel-text">
-        <h2 style=" color: #FDBE33">Hadith </h2>
-        <br /><br />
-        <center>
-            <p>
-                Abu Hurairah:(May Allah be pleased with him) reported:<br />
-                The Messenger of Allah (ﷺ) said:
-            </p>
-
-            <p style="color:black;font-size:xx-large">
-                <b>   مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ طَرِيقًا إِلَى الْجَنَّةِ‏</b>
-            </p>
-            <p style="color:black">
-                Whoever takes a path upon which to obtain knowledge, Allah makes the path to Paradise easy for him.<br />
-                <b>[Jami` at-Tirmidhi 2646].</b>
-            </p>
-        </center>
-    </div><hr />
+<!--------->
+<div class="team">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Coming soon</h2>
+        </div>
+    </div>
 </div>
 <!-- Contact End -->
-<div class="single">
+<!--<div class="single">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -128,7 +129,7 @@
                         </div>
                         <div class="form-group">
                             <label for="id">ID*</label>
-                            <input type="text" class="form-control" name="ID" id="idfor" required style="cursor:auto"  onkeypress="return funvalid()"/>
+                            <input type="text" class="form-control" name="ID" id="idfor" required style="cursor:auto" onkeypress="return funvalid()" />
                             <div id="message" style="color:red"></div>
                         </div>
                         <div class="form-group">
@@ -186,9 +187,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!---------------Scripting function-------------------->
-<script type="text/javascript">
+<!--<script type="text/javascript">
     function funvalid() {
         var e = document.getElementById("idfor").value;
         var m = document.getElementById("message");
@@ -203,4 +204,4 @@
             m.style.color = "Red";
         }
     }
-</script>
+</script>-->

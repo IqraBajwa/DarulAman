@@ -1,109 +1,180 @@
-﻿@{
+﻿@model IEnumerable<DarulAman.Models.tbl_FAQs>
+@using DarulAman.Models;
+@{
+    Model1 db = new Model1();
     Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
 }
-<!-- Page Header Start -->
-<div class="page-header-contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>Register here to meet your Community</h2>
-            </div>
-            <div class="col-12">
-                <a href="@Url.Action("IndexCustomer","Home")">Home</a>
-                <a href="@Url.Action("GeneralRegistration","Home")">Registration</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Page Header End --><!-- Prayer -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="section-header">
-                <div class="section-header text-center">
-                    <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
-                    <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/43095460/shafi/1/0/18.0/17.0"> </iframe>
+<head>
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .faq-heading {
+            border-bottom: #777;
+            padding: 25px 60px 10px;
+            margin-left: 15%;
+            font-size: x-large;
+            font-weight: 600;
+        }
+
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hr-line {
+            width: 60%;
+            margin: auto;
+        }
+        /* Style the buttons that are used to open and close the faq-page body */
+        .faq-page {
+            /* background-color: #eee; */
+            color: #444;
+            cursor: pointer;
+            padding: 25px 20px;
+            width: 60%;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin: auto;
+            font-size: large;
+        }
+
+        .faq-body {
+            margin: auto;
+            /* text-align: center; */
+            width: 50%;
+            padding: inherit;
+        }
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active2,
+        .faq-page:hover {
+            background-color: #F9F9F9;
+        }
+        /* Style the faq-page panel. Note: hidden by default */
+        .faq-body {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        .faq-page:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active2:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header Start -->
+    <div class="page-header-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="col-12">
+                    <a href="@Url.Action("IndexCustomer","Home")">Home</a>
+                    <a href="@Url.Action("FAQs","Home")">FAQs</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Prayer -->
-<div class="single">
+    <!-- Page Header End -->
+    <!-- Prayer -->
+
     <div class="container">
         <div class="row">
-            <div class=" col-md-12">
-                <div class="form2">
-                    <div class="comment-form">
-                        <center> <h2 style="color:#FDBE33;">Enter your Information</h2></center><br />
-
-                        <form action="/Home/GeneralReg" method="post">
-                            <div class="form-group">
-                                <label for="name"> First Name *</label>
-                                <input type="text" class="form-control" name="FIRST_NAME" id="name" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label for="name"> Last Name *</label>
-                                <input type="text" class="form-control" id="name" name="LAST_NAME" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label for="tel#">Tel# </label>
-                                <input type="number" class="form-control" 
-                                       pattern="/^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g" name="CONTACT" id="tel#">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" class="form-control" name="EMAIL" id="email" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label for="id">Profession *</label>
-                                <input type="text" class="form-control" name="PROFESSION" id="id" required="required">
-                            </div>
-
-                            <div class="form-group">
-                                <p>Gender *</p>
-                                <div>
-
-                                    <input type="radio" id="female" class="custom-radio" name="GENDER" value="Female" required>&nbsp;
-                                    <label for="female">Female</label><br>
-                                    <input type="radio" id="male" name="GENDER" class="custom-radio" value="Male" required>&nbsp;
-                                    <label for="male">Male</label><br>
-
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="id">Country *</label>
-                                <input type="text" class="form-control" name="COUNTRY" id="id" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label for="id">City *</label>
-                                <input type="text" class="form-control" id="id" name="CITY" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label for="id">Address *</label>
-                                <input type="text" class="form-control" name="ADDRESS" id="id">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" cols="30" rows="5" name="MESSAGE" class="form-control"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="checkbox" required />
-                                <span>
-                                    I Accept the <a href="@Url.Action("Privacypolicy","Home")" style="color:#FDBE33 " required="required"><b>Terms and Conditions</b></a>
-                                </span>
-                            </div>
-                            <br />
-                            <div class="form-group">
-                                <input type="submit" value="Submit" class="btn btn-custom btn-block">
-                            </div>
-
-                        </form>
-
+            <div class="col-lg-12">
+                <div class="section-header">
+                    <div class="section-header text-center">
+                        <h1 style="color: #FDBE33" class=" text-center">Prayer Timing</h1>
+                        <iframe title="Prayer Timing" class="prayerbox" scrolling="no" src="https://www.islamicfinder.org/prayer-widget/2874545/shafi/6/0/13/13" data-dashlane-frameid="1122"> </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Prayer -->
+    <main>
+
+        <h1 class="faq-heading">Events Based</h1>
+        @if (Model.Count() > 0)
+        {
+            <section class="faq-container">
+
+                @foreach (var f in Model)
+                {
+                    <div class="faq-one">
+                        <!-- faq question -->
+                        <h1 class="faq-page">@f.FAQ_QUESTION</h1>
+                        <!-- faq answer -->
+                        <div class="faq-body">
+                            <p>
+                                @f.FAQ_ANSWER
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                }
+
+            </section>
+        }
+        else
+        {
+
+            <h5 class="text-center"><b style="color:#FDBE33"> Coming Soon </b></h5>
+
+        }
+        <br />
+
+        <h1 class="faq-heading">Other</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">What is an FAQ Page?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        Coming Soon!
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">Why do you need an FAQ page?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        Coming Soon!
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+                <h1 class="faq-page">Does it improves the user experience of a website?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        Coming Soon!
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
